@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
         className="absolute right-0 top-0 h-full w-full md:w-3/5 z-0"
       >
         <img 
-          src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=2574&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=1920&auto=format&fit=crop" 
           alt="Gentleman in suit" 
           className="w-full h-full object-cover object-top opacity-50 filter grayscale brightness-75 contrast-125"
         />

@@ -58,8 +58,9 @@ export const ProfileSection: React.FC = () => {
         <div className="w-full md:w-5/12 h-[300px] md:h-auto min-h-[300px] md:min-h-[500px] relative">
           <div className="absolute inset-0 bg-[#050505]/20 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1505022610485-0249ba5b3675?q=80&w=2670&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1505022610485-0249ba5b3675?q=80&w=1200&auto=format&fit=crop" 
             alt="内海 亮" 
+            loading="lazy"
             className="w-full h-full object-cover filter grayscale contrast-125 brightness-75"
           />
         </div>

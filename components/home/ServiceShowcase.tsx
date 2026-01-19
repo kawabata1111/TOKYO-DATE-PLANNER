@@ -11,7 +11,8 @@ export const ProblemSection: React.FC = () => {
         <div className="w-full md:w-1/2 relative min-h-[400px] overflow-hidden">
           <img 
             src="/images/philosophy.png" 
-            alt="Concept visual" 
+            alt="Couple walking away holding hands" 
+            loading="lazy"
             className="absolute inset-0 w-full h-full object-cover grayscale opacity-60 transform scale-100 transition-transform duration-1000 hover:scale-105"
           />
           {/* 黒に溶け込ませるグラデーション */}
@@ -55,28 +56,28 @@ export const ServiceSection: React.FC = () => {
       title: "Fashion Consulting",
       jpTitle: "ファッションコンサル",
       desc: "買い物同行・ワードローブ診断で、大人の色気と清潔感を演出する服装をトータルサポート。トレンドを追うのではなく、「あなたに似合い、女性に選ばれる」スタイルを構築します。",
-      img: "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?q=80&w=2574&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1598808503746-f34c53b9323e?q=80&w=1200&auto=format&fit=crop"
     },
     {
       id: "02",
       title: "Photography",
       jpTitle: "プロフィール写真撮影",
       desc: "スタジオでの硬い写真ではなく、自然光やロケーションを活かした「好印象な一枚」を。マッチングアプリや相談所での反応率を劇的に変えるプロの撮影技術。",
-      img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2528&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop"
     },
     {
       id: "03",
       title: "Matching Events",
       jpTitle: "出会いの場の提供",
       desc: "質の高い婚活イベントやパーティーを企画・運営。ただ集まるだけでなく、自然な会話が生まれる空間をコーディネートし、良質な出会いの機会を提供します。",
-      img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=2669&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200&auto=format&fit=crop"
     },
     {
       id: "04",
       title: "Communication",
       jpTitle: "会話・デートトレーニング",
       desc: "女性心理に基づいた会話術、デートプランニング、第一印象を良くするためのコーチング。表面的なテクニックではなく、深い関係を築くための対話力を磨きます。",
-      img: "https://images.unsplash.com/photo-1569929233287-f0565228c4d4?q=80&w=2670&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1569929233287-f0565228c4d4?q=80&w=1200&auto=format&fit=crop"
     }
   ];
 
@@ -99,6 +100,9 @@ export const ServiceSection: React.FC = () => {
                 <img 
                   src={service.img} 
                   alt={service.title} 
+                  loading="lazy"
+                  width="1200"
+                  height="1600"
                   className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 filter grayscale brightness-[0.7] contrast-125 group-hover:grayscale-0 group-hover:brightness-90"
                 />
                 <div className="absolute inset-0 border border-white/5 pointer-events-none" />
