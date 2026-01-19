@@ -28,11 +28,11 @@ export const Navbar: React.FC = () => {
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b ${scrolled ? 'bg-[#050505]/90 backdrop-blur-xl border-white/5 py-4' : 'bg-transparent border-transparent py-6 md:py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="z-50 relative group">
+          <a href="/" className="z-50 relative group">
             <h1 className="font-display text-xl md:text-2xl tracking-[0.2em] text-white font-bold">
               TOKYO <span className="text-gold font-light">DATE</span> PLANNER
             </h1>
-          </Link>
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-12">

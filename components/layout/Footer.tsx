@@ -7,9 +7,9 @@ export const Footer: React.FC = () => {
     <footer className="bg-[#111] text-gray-400 py-16 px-4 border-t border-gray-800">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-2">
-          <Link to="/" className="inline-block">
+          <a href="/" className="inline-block">
             <h3 className="text-2xl font-serif text-white mb-2 tracking-widest">TOKYO DATE PLANNER</h3>
-          </Link>
+          </a>
           <p className="text-xs tracking-widest uppercase mb-6 text-gold">Premium Dating Consultancy</p>
           <p className="mb-6 text-sm leading-relaxed max-w-sm">
             洗練された大人の男性のために。<br/>
