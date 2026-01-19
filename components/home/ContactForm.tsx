@@ -38,6 +38,7 @@ export const ContactSection: React.FC = () => {
           <input type="hidden" name="_subject" value="TOKYO DATE PLANNER: 新規お問い合わせ" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value={`${window.location.origin}/thanks`} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="group">

@@ -9,6 +9,7 @@ import { ContactSection } from './components/home/ContactForm';
 import { Footer } from './components/layout/Footer';
 import { LegalPage } from './components/legal/LegalPage';
 import { PrivacyPolicy } from './components/legal/PrivacyPolicy';
+import { ThanksPage } from './components/home/ThanksPage';
 
 const HomePage = () => (
   <main>
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/legal" element={<LegalPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/thanks" element={<ThanksPage />} />
         </Routes>
 
         <Footer />
