@@ -86,13 +86,13 @@ export const Hero: React.FC = () => {
             className="flex flex-col md:flex-row gap-6 items-start"
           >
             <a 
-              href="#contact"
+              href="/#contact"
               className="px-12 py-4 bg-white text-dark font-display tracking-widest text-sm hover:bg-gray-200 transition-colors"
             >
               BOOK CONSULTATION
             </a>
             <a 
-              href="#services"
+              href="/#services"
               className="px-12 py-4 border border-white/20 text-white font-display tracking-widest text-sm hover:border-gold hover:text-gold transition-colors"
             >
               VIEW SERVICES
