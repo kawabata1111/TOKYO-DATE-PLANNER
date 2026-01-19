@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="flex items-center gap-6 mb-12"
+            className="!hidden md:!flex items-center gap-6 mb-12"
           >
             <span className="h-[1px] w-12 bg-white/20"></span>
             <span className="text-gray-400 tracking-[0.4em] text-xs uppercase font-medium">Premium Styling Service</span>
@@ -72,10 +72,10 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-gray-400 text-sm md:text-base leading-loose font-serif max-w-md border-l border-white/10 pl-8 mb-16"
+            className="text-gray-400 text-sm md:text-base leading-relaxed md:leading-loose font-serif max-w-md border-l border-white/10 pl-4 md:pl-8 mb-16 whitespace-nowrap md:whitespace-normal"
           >
-            自信は、細部に宿る。<br/>
-            30代・40代のための、戦略的婚活スタイリング。<br/>
+            自信は、細部に宿る。<br className="block"/>
+            30代・40代のための、戦略的婚活スタイリング。<br className="block"/>
             「選ばれる男」への最短ルートをデザインします。
           </motion.p>
 

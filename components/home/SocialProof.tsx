@@ -55,7 +55,7 @@ export const ProfileSection: React.FC = () => {
     <Section className="py-0 md:py-0 overflow-hidden" noPadding>
       <div className="flex flex-col md:flex-row h-full">
         {/* Image Section */}
-        <div className="w-full md:w-5/12 min-h-[500px] relative">
+        <div className="w-full md:w-5/12 h-[300px] md:h-auto min-h-[300px] md:min-h-[500px] relative">
           <div className="absolute inset-0 bg-[#050505]/20 z-10" />
           <img 
             src="https://images.unsplash.com/photo-1505022610485-0249ba5b3675?q=80&w=2670&auto=format&fit=crop" 
@@ -65,7 +65,7 @@ export const ProfileSection: React.FC = () => {
         </div>
         
         {/* Text Section */}
-        <div className="w-full md:w-7/12 bg-[#050505] p-12 md:p-24 flex flex-col justify-center border-l border-white/5">
+        <div className="w-full md:w-7/12 bg-[#050505] px-8 py-10 md:p-24 flex flex-col justify-center border-l border-white/5">
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

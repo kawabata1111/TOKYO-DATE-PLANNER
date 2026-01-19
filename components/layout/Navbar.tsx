@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +16,11 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Concept', href: '#concept' },
-    { name: 'Services', href: '#services' },
-    { name: 'Stories', href: '#testimonials' },
-    { name: 'Plans', href: '#pricing' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Concept', href: '/#concept' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Stories', href: '/#testimonials' },
+    { name: 'Plans', href: '/#pricing' },
+    { name: 'FAQ', href: '/#faq' },
   ];
 
   return (
@@ -27,11 +28,11 @@ export const Navbar: React.FC = () => {
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b ${scrolled ? 'bg-[#050505]/90 backdrop-blur-xl border-white/5 py-4' : 'bg-transparent border-transparent py-6 md:py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           {/* Logo */}
-          <a href="#" className="z-50 relative group">
+          <Link to="/" className="z-50 relative group">
             <h1 className="font-display text-xl md:text-2xl tracking-[0.2em] text-white font-bold">
               TOKYO <span className="text-gold font-light">DATE</span> PLANNER
             </h1>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-12">
@@ -46,7 +47,7 @@ export const Navbar: React.FC = () => {
               </a>
             ))}
             <a 
-              href="#contact" 
+              href="/#contact" 
               className="px-6 py-2 border border-white/20 text-white text-xs tracking-widest hover:border-gold hover:text-gold transition-all duration-300"
             >
               RESERVE
@@ -91,7 +92,7 @@ export const Navbar: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                href="#contact" 
+                href="/#contact" 
                 onClick={() => setIsOpen(false)}
                 className="mt-8 text-gold text-sm tracking-[0.3em] uppercase border-b border-gold pb-2 inline-block mx-auto"
               >

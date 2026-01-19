@@ -76,16 +76,6 @@ export const PricingSection: React.FC = () => {
                 </li>
               ))}
             </ul>
-
-            <a href="#contact" className="mt-auto">
-               <Button 
-                variant={plan.recommend ? 'gold' : 'outline'} 
-                fullWidth 
-                className={plan.recommend ? '' : 'border-gray-800 hover:border-white text-gray-400 hover:text-white'}
-               >
-                Select Plan
-              </Button>
-            </a>
           </motion.div>
         ))}
       </div>
@@ -149,9 +139,6 @@ export const FaqSection: React.FC = () => {
             その他ご不明な点がございましたら、<br/>
             お気軽にお問い合わせください。
           </p>
-          <a href="#contact" className="inline-flex items-center gap-2 text-white border-b border-white/30 pb-1 text-sm hover:text-gold hover:border-gold transition-colors">
-            ASK A QUESTION <ArrowRight size={14} />
-          </a>
         </div>
         <div className="w-full md:w-2/3">
           {faqs.map((faq, idx) => (

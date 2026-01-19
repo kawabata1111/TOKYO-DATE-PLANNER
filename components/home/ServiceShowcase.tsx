@@ -9,13 +9,10 @@ export const ProblemSection: React.FC = () => {
       <div className="flex flex-col md:flex-row min-h-[80vh]">
         {/* Image Side */}
         <div className="w-full md:w-1/2 relative min-h-[400px] overflow-hidden">
-          <motion.img 
-            initial={{ scale: 1.1 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 1.5 }}
-            src="https://images.unsplash.com/photo-1600275669439-14e40452d20b?q=80&w=2670&auto=format&fit=crop" 
-            alt="Gentleman adjusting tie" 
-            className="absolute inset-0 w-full h-full object-cover grayscale opacity-50"
+          <img 
+            src="/images/philosophy.png" 
+            alt="Concept visual" 
+            className="absolute inset-0 w-full h-full object-cover grayscale opacity-60 transform scale-100 transition-transform duration-1000 hover:scale-105"
           />
           {/* 黒に溶け込ませるグラデーション */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505] to-transparent" />
@@ -79,7 +76,7 @@ export const ServiceSection: React.FC = () => {
       title: "Communication",
       jpTitle: "会話・デートトレーニング",
       desc: "女性心理に基づいた会話術、デートプランニング、第一印象を良くするためのコーチング。表面的なテクニックではなく、深い関係を築くための対話力を磨きます。",
-      img: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2670&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1569929233287-f0565228c4d4?q=80&w=2670&auto=format&fit=crop"
     }
   ];
 
@@ -117,16 +114,12 @@ export const ServiceSection: React.FC = () => {
               transition={{ duration: 1, delay: 0.2 }}
             >
               <span className="text-gray-500 text-[10px] tracking-[0.4em] uppercase block mb-6">{service.id} — {service.title}</span>
-              <h4 className="text-3xl md:text-4xl font-serif text-white mb-8 leading-tight">
+              <h4 className="text-[28px] sm:text-3xl md:text-4xl font-serif text-white mb-8 leading-tight whitespace-nowrap md:whitespace-normal tracking-tight md:tracking-normal">
                 {service.jpTitle}
               </h4>
-              <p className="text-gray-400 leading-8 font-serif mb-10 text-justify max-w-md">
+              <p className="text-gray-400 leading-8 font-serif mb-10 text-left md:text-justify max-w-md">
                 {service.desc}
               </p>
-              <a href="#contact" className="inline-flex items-center gap-4 text-white text-xs tracking-[0.2em] uppercase hover:text-gold transition-colors group">
-                <span className="border-b border-white/30 pb-1 group-hover:border-gold">Inquire Now</span>
-                <ArrowUpRight size={14} className="text-white/50 group-hover:text-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-              </a>
             </motion.div>
           </div>
         ))}
