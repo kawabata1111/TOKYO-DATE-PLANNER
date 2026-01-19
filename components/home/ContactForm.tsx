@@ -33,7 +33,7 @@ export const ContactSection: React.FC = () => {
         </div>
 
         {/* Form */}
-        <form action="https://formsubmit.co/ap.id.1224@icloud.com" method="POST" className="md:col-span-3 space-y-8">
+        <form action="https://formsubmit.co/kawabata06qb@gmail.com" method="POST" className="md:col-span-3 space-y-8">
           {/* FormSubmit Config */}
           <input type="hidden" name="_subject" value="TOKYO DATE PLANNER: 新規お問い合わせ" />
           <input type="hidden" name="_captcha" value="false" />
