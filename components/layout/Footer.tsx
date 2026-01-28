@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Twitter, Facebook } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           <a href="/" className="inline-block">
             <h3 className="text-2xl font-serif text-white mb-2 tracking-widest">TOKYO DATE PLANNER</h3>
           </a>
-          <p className="text-xs tracking-widest uppercase mb-6 text-gold">Dating & Matchmaking Service</p>
+          <p className="text-xs tracking-widest mb-6 text-gold">大人のための恋活・婚活サポート</p>
           <p className="mb-6 text-sm leading-relaxed max-w-sm">
             30代・40代のための厳選された出会いの場。<br/>
             質の高いマッチングイベントとトータルサポートで、<br/>
@@ -18,13 +18,16 @@ export const Footer: React.FC = () => {
           </p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-gold transition-colors"><Instagram size={20} /></a>
-            <a href="#" className="hover:text-gold transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="hover:text-gold transition-colors"><Facebook size={20} /></a>
+            <a href="#" className="hover:text-gold transition-colors">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
           </div>
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-6">Menu</h4>
+          <h4 className="text-white font-bold mb-6">メニュー</h4>
           <ul className="space-y-4 text-sm">
             <li><a href="/#services" className="hover:text-gold transition-colors">サービス内容</a></li>
             <li><a href="/#testimonials" className="hover:text-gold transition-colors">お客様の声</a></li>
@@ -34,7 +37,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div>
-          <h4 className="text-white font-bold mb-6">Legal & Contact</h4>
+          <h4 className="text-white font-bold mb-6">法的情報</h4>
           <ul className="space-y-4 text-sm">
             <li><Link to="/legal" className="hover:text-gold transition-colors">特定商取引法に基づく表記</Link></li>
             <li><Link to="/privacy" className="hover:text-gold transition-colors">プライバシーポリシー</Link></li>

@@ -16,11 +16,11 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Concept', href: '/#concept' },
-    { name: 'Services', href: '/#services' },
-    { name: 'Stories', href: '/#testimonials' },
-    { name: 'Plans', href: '/#pricing' },
-    { name: 'FAQ', href: '/#faq' },
+    { name: 'コンセプト', href: '/#concept' },
+    { name: 'サービス', href: '/#services' },
+    { name: 'お客様の声', href: '/#testimonials' },
+    { name: '料金', href: '/#pricing' },
+    { name: 'よくある質問', href: '/#faq' },
   ];
 
   return (
@@ -46,11 +46,11 @@ export const Navbar: React.FC = () => {
                 <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-            <a 
-              href="/#contact" 
+            <a
+              href="/#contact"
               className="px-6 py-2 border border-white/20 text-white text-xs tracking-widest hover:border-gold hover:text-gold transition-all duration-300"
             >
-              RESERVE
+              ご予約
             </a>
           </div>
 
@@ -96,7 +96,7 @@ export const Navbar: React.FC = () => {
                 onClick={() => setIsOpen(false)}
                 className="mt-8 text-gold text-sm tracking-[0.3em] uppercase border-b border-gold pb-2 inline-block mx-auto"
               >
-                Book Consultation
+                無料相談を予約
               </motion.a>
             </div>
           </motion.div>
