@@ -62,8 +62,8 @@ export const Hero: React.FC = () => {
         className="absolute right-0 top-0 h-full w-full md:w-3/5 z-0"
       >
         <img
-          src="/images/hero.png"
-          alt="Romantic dinner with Tokyo night view"
+          src="/images/hero.jpg"
+          alt="Couple date with Tokyo Tower"
           className="w-full h-full object-cover object-center"
         />
       </motion.div>

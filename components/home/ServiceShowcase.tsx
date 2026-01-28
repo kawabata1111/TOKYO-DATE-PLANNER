@@ -10,8 +10,8 @@ export const ProblemSection: React.FC = () => {
         {/* Image Side */}
         <div className="w-full md:w-1/2 relative min-h-[400px] overflow-hidden">
           <img
-            src="/images/concept.png"
-            alt="Professional consultant"
+            src="/images/concept.jpg"
+            alt="Elegant party scene"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-1000 hover:scale-105"
           />
