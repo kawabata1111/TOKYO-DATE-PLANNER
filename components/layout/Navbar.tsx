@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b ${scrolled ? 'bg-[#050505]/90 backdrop-blur-xl border-white/5 py-4' : 'bg-transparent border-transparent py-6 md:py-8'}`}>
+      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b ${scrolled ? 'bg-[#242424]/90 backdrop-blur-xl border-white/5 py-4' : 'bg-transparent border-transparent py-6 md:py-8'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           {/* Logo */}
           <a href="/" className="z-50 relative group">
@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="text-xs text-gray-400 hover:text-white transition-colors tracking-[0.2em] uppercase font-medium relative group"
+                className="text-xs text-white hover:text-white transition-colors tracking-[0.2em] uppercase font-medium relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
@@ -72,7 +72,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: "tween", duration: 0.4 }}
-            className="fixed inset-0 bg-[#050505] z-40 flex items-center justify-center md:hidden"
+            className="fixed inset-0 bg-[#242424] z-40 flex items-center justify-center md:hidden"
           >
             <div className="flex flex-col gap-10 text-center">
               {navLinks.map((link, idx) => (

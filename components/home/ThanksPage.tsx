@@ -20,7 +20,7 @@ export const ThanksPage: React.FC = () => {
             Thank You
           </h2>
           
-          <p className="text-gray-400 leading-relaxed font-serif mb-12">
+          <p className="text-white leading-relaxed font-serif mb-12">
             お問い合わせありがとうございます。<br/>
             内容を確認の上、担当者より24時間以内にご連絡させていただきます。<br/>
             今しばらくお待ちくださいませ。

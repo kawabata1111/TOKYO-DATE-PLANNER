@@ -6,24 +6,24 @@ import { motion, AnimatePresence } from 'framer-motion';
 export const PricingSection: React.FC = () => {
   const plans = [
     {
-      name: "Light",
+      name: "Entry",
       price: "50,000",
-      desc: "まずは基本を知りたい方へ",
-      features: ["ファッション診断", "買い物同行 (2時間)", "LINE相談 (2週間)"],
+      desc: "まずは出会いを体験したい方へ",
+      features: ["マッチングイベント参加 (1回)", "プロフィール添削", "LINE相談 (2週間)"],
       recommend: false
     },
     {
       name: "Standard",
       price: "120,000",
-      desc: "最短で成果を出したい方へ",
-      features: ["ファッション診断 & 同行", "プロフィール写真撮影", "デートプラン作成", "LINE相談 (1ヶ月)", "模擬デートレッスン"],
+      desc: "本気で出会いたい方へ",
+      features: ["マッチングイベント参加 (3回)", "プロフィール写真撮影", "デートプランニング (2回)", "スタイリング相談", "LINE相談 (1ヶ月)"],
       recommend: true
     },
     {
-      name: "Executive",
+      name: "Premium",
       price: "250,000",
-      desc: "全てを委ねる完全変革プラン",
-      features: ["Standardプラン全内容", "ワードローブ総入れ替え", "ヘアサロン同行", "LINE相談 (無制限)", "優先予約対応", "会員制イベント招待"],
+      desc: "理想のパートナーを見つけたい方へ",
+      features: ["Standardプラン全内容", "VIPイベント優先招待", "デートプランニング (無制限)", "専属コンシェルジュ", "成婚までサポート"],
       recommend: false
     }
   ];
@@ -41,7 +41,7 @@ export const PricingSection: React.FC = () => {
             transition={{ delay: idx * 0.15 }}
             className={`relative flex flex-col p-8 md:p-10 transition-all duration-500 group border ${
               plan.recommend 
-                ? 'bg-[#080808] border-gold/30' 
+                ? 'bg-[#2e2e2e] border-gold/30' 
                 : 'bg-[#050505] border-white/10 hover:border-white/20'
             }`}
           >
@@ -60,7 +60,7 @@ export const PricingSection: React.FC = () => {
 
             <div className="mb-8 pb-8 border-b border-gray-800">
               <div className="flex items-baseline">
-                <span className="text-lg text-gray-400 mr-2">¥</span>
+                <span className="text-lg text-white mr-2">¥</span>
                 <span className="text-4xl md:text-5xl font-display text-white font-light">{plan.price}</span>
               </div>
               <span className="text-gray-600 text-[10px] uppercase tracking-widest mt-2 block">Tax Included</span>
@@ -122,10 +122,10 @@ const FaqItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 
 export const FaqSection: React.FC = () => {
   const faqs = [
-    { q: "ファッションに全く詳しくないのですが...", a: "ご安心ください。むしろ「何もわからない」という状態からスタートされる方が8割以上です。専門用語は使わず、感覚ではなく論理で「なぜこれが似合うのか」を丁寧に解説いたします。" },
-    { q: "無料相談では何をしますか？", a: "約60分間、オンラインまたは対面にて、現状の課題や目標をヒアリングします。無理な勧誘は一切行わず、あなたに最適な戦略のロードマップをご提示する時間となります。" },
-    { q: "地方在住ですが利用できますか？", a: "はい、可能です。お買い物同行などは東京近郊となりますが、オンラインでのスタイリング提案やプロフィール作成、LINE相談などは全国どこからでもご利用いただけます。" },
-    { q: "年齢制限はありますか？", a: "30代・40代の方をメインとしていますが、20代後半の方や50代の方も実績がございます。年齢に応じた「年相応の魅力」を引き出す提案をいたします。" }
+    { q: "どんな方が参加されていますか？", a: "30代・40代の経営者、医師、弁護士など、真剣に出会いを求める方々が中心です。入会時に審査を設け、質の高いコミュニティを維持しています。" },
+    { q: "無料相談では何をしますか？", a: "約60分間、オンラインまたは対面にて、理想のパートナー像や現状の課題をヒアリング。あなたに最適な出会いのプランをご提案します。無理な勧誘は一切ありません。" },
+    { q: "イベントはどのような形式ですか？", a: "少人数制のディナーパーティーや、趣味を共有できるアクティビティなど、自然な会話が生まれる形式を採用。「婚活パーティー感」のない、大人の社交の場です。" },
+    { q: "成婚率はどのくらいですか？", a: "6ヶ月以内にお付き合いを開始される方が約70%、1年以内の成婚率は約45%です。一人ひとりに寄り添ったサポートで、質の高い出会いを実現しています。" }
   ];
 
   return (
@@ -134,7 +134,7 @@ export const FaqSection: React.FC = () => {
         <div className="w-full md:w-1/3">
           <h3 className="text-gray-500 text-xs tracking-[0.3em] font-bold uppercase mb-4">Common Questions</h3>
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-8">FAQ</h2>
-          <p className="text-gray-400 text-sm leading-relaxed mb-8">
+          <p className="text-white text-sm leading-relaxed mb-8">
             よくあるご質問をまとめました。<br/>
             その他ご不明な点がございましたら、<br/>
             お気軽にお問い合わせください。

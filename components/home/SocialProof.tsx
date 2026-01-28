@@ -6,21 +6,21 @@ import { Quote } from 'lucide-react';
 export const SuccessSection: React.FC = () => {
   const testimonials = [
     {
-      age: "36",
+      age: "38",
       job: "経営者",
-      text: "今までマッチングアプリで会うことすらできませんでしたが、プロフィール写真と服装を変えただけで、月10人以上の女性とマッチングするようになりました。",
+      text: "イベントで出会った女性と意気投合し、3ヶ月後にお付き合いを始めました。普段の生活では絶対に出会えなかったタイプの素敵な方です。",
     },
     {
-      age: "42",
+      age: "41",
       job: "医師",
-      text: "ファッションには無頓着でしたが、内海さんの同行ショッピングで自分に似合うスタイルを発見。自信を持ってデートに行けるようになり、無事成婚しました。",
+      text: "デートプランニングのおかげで、緊張しがちな初デートも自信を持って臨めました。今では彼女と結婚を前提にお付き合いしています。",
     }
   ];
 
   return (
     <Section id="testimonials" className="bg-[#050505] relative overflow-hidden">
       
-      <SectionHeading title="変革の物語" subtitle="SUCCESS STORIES" />
+      <SectionHeading title="出会いの物語" subtitle="SUCCESS STORIES" />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
         {testimonials.map((t, idx) => (
@@ -61,7 +61,7 @@ export const ProfileSection: React.FC = () => {
             src="https://images.unsplash.com/photo-1505022610485-0249ba5b3675?q=80&w=1200&auto=format&fit=crop" 
             alt="内海 亮" 
             loading="lazy"
-            className="w-full h-full object-cover filter grayscale contrast-125 brightness-75"
+            className="w-full h-full object-cover"
           />
         </div>
         
@@ -78,9 +78,9 @@ export const ProfileSection: React.FC = () => {
             </h2>
             <p className="text-gray-500 font-display text-xl tracking-widest mb-10">RYO UTSUMI</p>
             
-            <p className="text-gray-400 leading-8 mb-6 font-serif text-justify border-l border-white/10 pl-6">
-              ファッション業界で10年以上のキャリアを経て、TOKYO DATE PLANNERを設立。
-              「大人の男性の魅力は、適切な演出で開花する」を信条に、婚活中の男性のスタイリングとコミュニケーションをサポート。
+            <p className="text-white leading-8 mb-6 font-serif text-justify border-l border-white/10 pl-6">
+              「素敵な出会いは、準備と環境で決まる」を信条に、TOKYO DATE PLANNERを設立。
+              厳選された出会いの場の提供から、スタイリング、コミュニケーションまで、理想のパートナーとの出会いをトータルサポート。
             </p>
             
             <div className="mt-16">

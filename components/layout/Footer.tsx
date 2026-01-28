@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#111] text-gray-400 py-16 px-4 border-t border-gray-800">
+    <footer className="bg-[#242424] text-white py-16 px-4 border-t border-gray-800">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-2">
           <a href="/" className="inline-block">
             <h3 className="text-2xl font-serif text-white mb-2 tracking-widest">TOKYO DATE PLANNER</h3>
           </a>
-          <p className="text-xs tracking-widest uppercase mb-6 text-gold">Premium Dating Consultancy</p>
+          <p className="text-xs tracking-widest uppercase mb-6 text-gold">Dating & Matchmaking Service</p>
           <p className="mb-6 text-sm leading-relaxed max-w-sm">
-            洗練された大人の男性のために。<br/>
-            ファッションからコミュニケーションまで、<br/>
-            あなたの魅力を最大限に引き出す婚活支援サービス。
+            30代・40代のための厳選された出会いの場。<br/>
+            質の高いマッチングイベントとトータルサポートで、<br/>
+            理想のパートナーとの出会いを実現します。
           </p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-gold transition-colors"><Instagram size={20} /></a>

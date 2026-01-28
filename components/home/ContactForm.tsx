@@ -6,10 +6,10 @@ export const ContactSection: React.FC = () => {
   return (
     <Section id="contact" className="border-t border-white/5 bg-[#050505]">
       <div className="max-w-4xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Start Your Journey</h2>
-        <p className="text-gray-400 font-serif">
-          まずは無料カウンセリングにて、あなたの現状と目標をお聞かせください。<br/>
-          新たな一歩は、ここから始まります。
+        <h2 className="text-4xl md:text-5xl font-serif text-white mb-6 font-light">Find Your Partner</h2>
+        <p className="text-white font-light">
+          まずは無料カウンセリングにて、理想のパートナー像をお聞かせください。<br/>
+          運命の出会いへの第一歩を、一緒に踏み出しましょう。
         </p>
       </div>
       
