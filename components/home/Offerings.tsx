@@ -4,85 +4,201 @@ import { Check, Plus, Minus, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const PricingSection: React.FC = () => {
-  const plans = [
+  const basePlans = [
     {
-      name: "Entry",
-      price: "50,000",
-      desc: "まずは出会いを体験したい方へ",
-      features: ["マッチングイベント参加 (1回)", "プロフィール添削", "LINE相談 (2週間)"],
-      recommend: false
+      name: "初級コース",
+      price: "200,000",
+      desc: "まずは始めたい方へ",
+      features: [
+        "ファッションコーディネート（春夏秋冬 年4回）",
+        "写真撮影（春夏秋冬 年4回）",
+        "美容院の紹介+初回カット無料",
+        "LINEによるファッション相談",
+        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）"
+      ],
+      recommend: false,
+      hasLoveOption: false
     },
     {
-      name: "Standard",
-      price: "120,000",
+      name: "中級コース",
+      price: "300,000",
       desc: "本気で出会いたい方へ",
-      features: ["マッチングイベント参加 (3回)", "プロフィール写真撮影", "デートプランニング (2回)", "スタイリング相談", "LINE相談 (1ヶ月)"],
-      recommend: true
+      features: [
+        "ファッションコーディネート（春夏秋冬 年6回）",
+        "写真撮影（春夏秋冬 年6回）",
+        "美容院の紹介+初回カット無料",
+        "LINEによるファッション相談",
+        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）"
+      ],
+      recommend: true,
+      hasLoveOption: false
     },
     {
-      name: "Premium",
-      price: "250,000",
+      name: "上級VIPコース",
+      price: "500,000",
       desc: "理想のパートナーを見つけたい方へ",
-      features: ["Standardプラン全内容", "VIPイベント優先招待", "デートプランニング (無制限)", "専属コンシェルジュ", "成婚までサポート"],
-      recommend: false
+      features: [
+        "ファッションコーディネート（春夏秋冬 年6回）",
+        "写真撮影（春夏秋冬 年6回）",
+        "美容院の紹介+初回カット無料",
+        "LINEによるファッション相談",
+        "ファッションオンラインサービス",
+        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
+        "理想のパートナーを個別で直接ご紹介（マンツーマンでのパートナー探し全面協力）"
+      ],
+      recommend: false,
+      hasLoveOption: false
     }
   ];
+
+  const loveOptionPlans = [
+    {
+      name: "初級コース",
+      subtitle: "恋愛オプション付",
+      price: "300,000",
+      desc: "恋愛サポートも欲しい方へ",
+      features: [
+        "ファッションコーディネート（春夏秋冬 年4回）",
+        "写真撮影（春夏秋冬 年4回）",
+        "美容院の紹介+初回カット無料",
+        "LINEによるファッション相談&恋愛相談",
+        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
+        "女性アドバイザーによるお悩みzoom相談室（毎月開催）"
+      ],
+      recommend: false,
+      hasLoveOption: true
+    },
+    {
+      name: "中級コース",
+      subtitle: "恋愛オプション付",
+      price: "450,000",
+      desc: "本気の恋愛サポート",
+      features: [
+        "ファッションコーディネート（春夏秋冬 年6回）",
+        "写真撮影（春夏秋冬 年6回）",
+        "美容院の紹介+初回カット無料",
+        "LINEによるファッション相談&恋愛相談",
+        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
+        "女性アドバイザーによるお悩みzoom相談室（毎月開催）",
+        "女性アドバイザーによるリアルデートトレーニング（年2回）",
+        "女性恋愛講師によるオンラインセミナー"
+      ],
+      recommend: false,
+      hasLoveOption: true
+    },
+    {
+      name: "上級VIPコース",
+      subtitle: "恋愛オプション付",
+      price: "600,000",
+      desc: "フルサポートで理想の出会いを",
+      features: [
+        "ファッションコーディネート（春夏秋冬 年6回）",
+        "写真撮影（春夏秋冬 年6回）",
+        "美容院の紹介+初回カット無料",
+        "LINEによるファッション相談&恋愛相談",
+        "ファッションオンラインサービス",
+        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
+        "理想のパートナーを個別で直接ご紹介（マンツーマンでのパートナー探し全面協力）",
+        "女性モデルによるお悩みzoom相談室（毎月開催）",
+        "女性アドバイザーによるリアルデートトレーニング（年4回）",
+        "女性恋愛講師によるオンラインセミナー"
+      ],
+      recommend: true,
+      hasLoveOption: true
+    },
+    {
+      name: "完全婚活支援コース",
+      subtitle: "恋愛オプション付",
+      price: "800,000",
+      desc: "成婚まで徹底サポート",
+      features: [
+        "ファッションコーディネート（春夏秋冬 年6回）",
+        "写真撮影（春夏秋冬 年6回）",
+        "美容院の紹介+初回カット無料",
+        "LINEによるファッション相談&恋愛相談",
+        "ファッションオンラインサービス",
+        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
+        "理想のパートナーを個別で直接ご紹介（マンツーマンでのパートナー探し全面協力）",
+        "女性アドバイザーによるお悩みzoom相談室（毎月開催）",
+        "女性アドバイザーによるリアルデートトレーニング（年4回）",
+        "女性恋愛講師によるオンラインセミナー"
+      ],
+      recommend: false,
+      hasLoveOption: true
+    }
+  ];
+
+  const PlanCard = ({ plan, idx }: { plan: any; idx: number }) => (
+    <motion.div
+      key={idx}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: idx * 0.1 }}
+      className={`relative flex flex-col p-8 md:p-10 transition-all duration-500 group border ${
+        plan.recommend
+          ? 'bg-[#2e2e2e] border-gold/30'
+          : 'bg-[#050505] border-white/10 hover:border-white/20'
+      }`}
+    >
+      {plan.recommend && (
+        <div className="absolute top-0 right-0 bg-gold text-dark text-[10px] font-bold tracking-widest px-3 py-1 uppercase">
+          おすすめ
+        </div>
+      )}
+
+      <div className="mb-8">
+        <h3 className={`text-xl font-display tracking-widest mb-1 ${plan.recommend ? 'text-gold' : 'text-white'}`}>
+          {plan.name}
+        </h3>
+        {plan.subtitle && (
+          <span className="inline-block bg-pink-600 text-white text-[10px] px-2 py-1 mb-2">{plan.subtitle}</span>
+        )}
+        <p className="text-gray-500 text-xs">{plan.desc}</p>
+      </div>
+
+      <div className="mb-8 pb-8 border-b border-gray-800">
+        <div className="flex items-baseline">
+          <span className="text-lg text-white mr-2">¥</span>
+          <span className="text-4xl md:text-5xl font-display text-white font-light">{plan.price}</span>
+        </div>
+        <span className="text-gray-600 text-[10px] uppercase tracking-widest mt-2 block">Tax Included</span>
+      </div>
+
+      <ul className="space-y-4 flex-grow mb-10">
+        {plan.features.map((feature: string, fIdx: number) => (
+          <li key={fIdx} className="flex items-start gap-3">
+            <span className={`mt-1 p-0.5 rounded-full ${plan.recommend ? 'text-dark bg-gold' : 'text-gray-500 border border-gray-800'}`}>
+              <Check size={10} strokeWidth={3} />
+            </span>
+            <span className="text-gray-300 text-sm font-light tracking-wide">{feature}</span>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
 
   return (
     <Section id="pricing">
       <SectionHeading title="プラン・料金" subtitle="MEMBERSHIP" />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {plans.map((plan, idx) => (
-          <motion.div 
-            key={idx} 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.15 }}
-            className={`relative flex flex-col p-8 md:p-10 transition-all duration-500 group border ${
-              plan.recommend 
-                ? 'bg-[#2e2e2e] border-gold/30' 
-                : 'bg-[#050505] border-white/10 hover:border-white/20'
-            }`}
-          >
-            {plan.recommend && (
-              <div className="absolute top-0 right-0 bg-gold text-dark text-[10px] font-bold tracking-widest px-3 py-1 uppercase">
-                Most Popular
-              </div>
-            )}
-            
-            <div className="mb-8">
-              <h3 className={`text-xl font-display tracking-widest uppercase mb-2 ${plan.recommend ? 'text-gold' : 'text-white'}`}>
-                {plan.name}
-              </h3>
-              <p className="text-gray-500 text-xs">{plan.desc}</p>
-            </div>
 
-            <div className="mb-8 pb-8 border-b border-gray-800">
-              <div className="flex items-baseline">
-                <span className="text-lg text-white mr-2">¥</span>
-                <span className="text-4xl md:text-5xl font-display text-white font-light">{plan.price}</span>
-              </div>
-              <span className="text-gray-600 text-[10px] uppercase tracking-widest mt-2 block">Tax Included</span>
-            </div>
-
-            <ul className="space-y-5 flex-grow mb-10">
-              {plan.features.map((feature, fIdx) => (
-                <li key={fIdx} className="flex items-start gap-4">
-                  <span className={`mt-1 p-0.5 rounded-full ${plan.recommend ? 'text-dark bg-gold' : 'text-gray-500 border border-gray-800'}`}>
-                    <Check size={10} strokeWidth={3} />
-                  </span>
-                  <span className="text-gray-300 text-sm font-light tracking-wide">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+      {/* ベースプラン */}
+      <h3 className="text-center text-white text-xl mb-8 font-light">ベーシックプラン</h3>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+        {basePlans.map((plan, idx) => (
+          <PlanCard key={idx} plan={plan} idx={idx} />
         ))}
       </div>
-      <p className="text-center text-gray-600 text-xs mt-12 tracking-wide">
-        ※ 上記以外にも、お客様のご予算や目的に合わせたカスタマイズプランもご用意可能です。お気軽にご相談ください。
-      </p>
-    </Section>
+
+      {/* 恋愛オプション付きプラン */}
+      <h3 className="text-center text-white text-xl mb-8 font-light">恋愛オプション付きプラン</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        {loveOptionPlans.map((plan, idx) => (
+          <PlanCard key={idx} plan={plan} idx={idx} />
+        ))}
+      </div>
+
+          </Section>
   );
 };
 
