@@ -49,7 +49,7 @@ export const ServiceSection: React.FC = () => {
     {
       id: "01",
       title: "Exclusive Events",
-      jpTitle: "出会いの場を提供🥂恋活＆婚活食事会",
+      jpTitle: "出会いの場を提供\n恋活＆婚活食事会",
       desc: "外見・内面を磨いたのち、実際の出会いの場をご提供します。その後のアフターフォローも充実しております。",
       img: "/images/events.png"
     },
@@ -120,7 +120,7 @@ export const ServiceSection: React.FC = () => {
               transition={{ duration: 1, delay: 0.2 }}
             >
               <span className="text-gray-500 text-[10px] tracking-[0.4em] uppercase block mb-6">{service.id} — {service.title}</span>
-              <h4 className="text-[28px] sm:text-3xl md:text-4xl font-serif text-white mb-8 leading-tight whitespace-nowrap md:whitespace-normal tracking-tight md:tracking-normal">
+              <h4 className="text-[28px] sm:text-3xl md:text-4xl font-serif text-white mb-8 leading-tight whitespace-pre-line tracking-tight md:tracking-normal">
                 {service.jpTitle}
               </h4>
               <p className="text-white leading-8 font-serif mb-10 text-left md:text-justify max-w-md">
