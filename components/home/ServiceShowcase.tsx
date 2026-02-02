@@ -62,13 +62,20 @@ export const ServiceSection: React.FC = () => {
     },
     {
       id: "03",
+      title: "Online Seminar",
+      jpTitle: "女性恋愛講師によるオンラインセミナー",
+      desc: "女性目線で学ぶコミュニケーション能力のスキルアップ。なぜ恋愛対象にならないのかを女性講師が解説。現状の考え方からズレを修正します。",
+      img: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop"
+    },
+    {
+      id: "04",
       title: "Profile Creation",
       jpTitle: "プロフィール作成支援",
       desc: "某有名番組、フェスまで担当する撮影チームで構成。マッチングアプリだけでなく、ビジネスで使えるプロフィール撮影も承ります。",
       img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop"
     },
     {
-      id: "04",
+      id: "05",
       title: "Personal Styling",
       jpTitle: "スタイリングサポート",
       desc: "全国的な実績のあるスタイリストによるコーディネート。女性は中身を見る前に\"見た目\"で判断します。今のあなたに合った外見をプロが設計します。",
