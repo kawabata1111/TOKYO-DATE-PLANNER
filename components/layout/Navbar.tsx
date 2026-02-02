@@ -70,16 +70,16 @@ export const Navbar: React.FC = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b ${scrolled ? 'bg-[#242424]/90 backdrop-blur-xl border-white/5 py-4' : 'bg-transparent border-transparent py-4 md:py-8'}`}>
       <div className="max-w-7xl mx-auto px-4 md:px-12 flex justify-center md:justify-between items-center">
-        {/* Logo - Desktop only */}
-        <a href="/" className="hidden md:flex z-50 relative group items-center gap-3">
-          <img src="/images/logo.png" alt="TOKYO DATE PLANNER" className="h-20" />
-          <h1 className="font-display text-xl md:text-2xl tracking-[0.2em] text-white font-bold">
+        {/* Logo */}
+        <a href="/" className={`z-50 relative group flex items-center gap-3 transition-all duration-500 ${scrolled ? 'opacity-0 pointer-events-none absolute' : 'opacity-100'}`}>
+          <img src="/images/logo.png" alt="TOKYO DATE PLANNER" className="h-16 md:h-20" />
+          <h1 className="hidden md:block font-display text-xl md:text-2xl tracking-[0.2em] text-white font-bold">
             TOKYO <span className="text-gold font-light">DATE</span> PLANNER
           </h1>
         </a>
 
-        {/* Mobile - Icons only */}
-        <div className="flex md:hidden items-center gap-4">
+        {/* Mobile - Icons (appear on scroll) */}
+        <div className={`flex md:hidden items-center gap-4 transition-all duration-500 ${scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
           {socialLinks.map((link) => (
             <a
               key={link.name}
@@ -97,8 +97,8 @@ export const Navbar: React.FC = () => {
           ))}
         </div>
 
-        {/* Desktop - Icons */}
-        <div className="hidden md:flex items-center gap-10">
+        {/* Desktop - Icons (appear on scroll) */}
+        <div className={`hidden md:flex items-center gap-10 transition-all duration-500 ${scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
           {socialLinks.map((link) => (
             <a
               key={link.name}
