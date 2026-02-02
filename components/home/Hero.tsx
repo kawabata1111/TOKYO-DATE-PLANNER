@@ -148,17 +148,6 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Elegant Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-12 left-6 md:left-12 z-20"
-      >
-        <div className="flex items-center gap-4">
-          <div className="h-[1px] w-12 bg-white/10"></div>
-          <span className="text-[10px] tracking-[0.3em] text-white/30 uppercase">Scroll to explore</span>
-        </div>
-      </motion.div>
     </div>
   );
 };
