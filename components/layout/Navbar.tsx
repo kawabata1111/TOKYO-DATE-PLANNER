@@ -68,10 +68,10 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b ${scrolled ? 'bg-[#242424]/90 backdrop-blur-xl border-white/5 py-4' : 'bg-transparent border-transparent py-4 md:py-8'}`}>
-      <div className="max-w-7xl mx-auto px-4 md:px-12 flex justify-center md:justify-between items-center">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b ${scrolled ? 'bg-[#242424]/90 backdrop-blur-xl border-white/5 py-3' : 'bg-transparent border-transparent py-3 md:py-8'}`}>
+      <div className="max-w-7xl mx-auto px-4 md:px-12 flex justify-center md:justify-between items-center relative min-h-[64px] md:min-h-0">
         {/* Logo - Desktop: always visible / Mobile: hidden on scroll */}
-        <a href="/" className={`z-50 group flex items-center gap-3 transition-all duration-500 md:opacity-100 md:relative ${scrolled ? 'opacity-0 pointer-events-none md:pointer-events-auto absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0' : 'opacity-100'}`}>
+        <a href="/" className={`z-50 group flex items-center gap-3 transition-all duration-500 md:opacity-100 md:relative ${scrolled ? 'opacity-0 pointer-events-none md:pointer-events-auto md:left-auto md:translate-x-0' : 'opacity-100'} md:static`}>
           <img src="/images/logo.png" alt="TOKYO DATE PLANNER" className="h-16 md:h-20" />
           <h1 className="hidden md:block font-display text-xl md:text-2xl tracking-[0.2em] text-white font-bold">
             TOKYO <span className="text-gold font-light">DATE</span> PLANNER
@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
         </a>
 
         {/* Mobile - Icons (appear on scroll) */}
-        <div className={`flex md:hidden w-full justify-evenly items-center transition-all duration-500 absolute left-0 right-0 px-4 ${scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+        <div className={`flex md:hidden w-full justify-evenly items-center transition-all duration-500 absolute inset-x-0 top-1/2 -translate-y-1/2 px-2 ${scrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
           {socialLinks.map((link) => (
             <a
               key={link.name}
