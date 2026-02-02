@@ -27,11 +27,11 @@ export const VideoPage: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: idx * 0.2 }}
-              className="bg-[#1a1a1a] border border-white/10 overflow-hidden"
+              className="bg-[#1a1a1a] border border-white/10 overflow-hidden flex justify-center"
             >
               <video
                 controls
-                className="w-full"
+                className="w-full max-h-[70vh] object-contain"
                 poster=""
               >
                 <source src={video.src} type="video/mp4" />
