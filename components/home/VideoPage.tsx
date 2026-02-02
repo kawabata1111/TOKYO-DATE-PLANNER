@@ -17,10 +17,7 @@ export const VideoPage: React.FC = () => {
           className="text-center mb-16"
         >
           <h3 className="text-gold/60 text-xs font-bold tracking-[0.3em] mb-6 uppercase">Introduction</h3>
-          <h1 className="text-4xl md:text-6xl font-serif text-white mb-6 font-light">紹介動画</h1>
-          <p className="text-gray-400 font-light">
-            TOKYO DATE PLANNERのサービスをご紹介します。
-          </p>
+          <h1 className="text-4xl md:text-6xl font-serif text-white font-light">紹介動画</h1>
         </motion.div>
 
         <div className="space-y-16">
