@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// stand.fmアイコン
+// stand.fmアイコン（他より少し大きめに表示）
 const StandFmIcon = ({ size = 24 }: { size?: number }) => (
   <img
     src="/images/standfm-icon.png"
     alt="stand.fm"
-    style={{ width: size, height: size }}
+    style={{ width: size * 1.4, height: size * 1.4 }}
     className="invert"
   />
 );
