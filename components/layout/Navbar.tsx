@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram } from 'lucide-react';
+import { Menu, X, Instagram, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // stand.fmアイコン（他より少し大きめに表示）
@@ -20,6 +20,12 @@ const LineIcon = ({ size = 24 }: { size?: number }) => (
 );
 
 const socialLinks = [
+  {
+    name: '公式LP',
+    href: 'https://tokyodateplanner.com/',
+    icon: ExternalLink,
+    color: 'hover:text-gold'
+  },
   {
     name: 'stand.fm',
     href: 'https://stand.fm/channels/69724fe28d01e8272ccc2c13',
