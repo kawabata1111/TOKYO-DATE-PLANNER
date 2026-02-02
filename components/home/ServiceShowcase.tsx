@@ -56,7 +56,7 @@ export const ServiceSection: React.FC = () => {
     {
       id: "02",
       title: "Date Planning",
-      jpTitle: "選べる女性恋愛アドバイザーによるお悩みzoom相談室＆お食事デートトレーニング",
+      jpTitle: "モテ男子を作る♥女性恋愛講師によるオンラインセミナー",
       desc: "オンラインだけでは終わらせません。リアリティあるお食事デートで、直接あなたに寄り添いサポートさせていただきます。",
       img: "/images/date-planning.jpg"
     },
