@@ -64,7 +64,7 @@ export const ServiceSection: React.FC = () => {
       id: "03",
       title: "Profile Creation",
       jpTitle: "プロフィール作成支援",
-      desc: "プロカメラマンによる撮影と、魅力を最大限に伝えるプロフィール文の作成。マッチングアプリや結婚相談所での反応率を劇的に向上させます。",
+      desc: "某有名番組、フェスまで担当する撮影チームで構成。マッチングアプリだけでなく、ビジネスで使えるプロフィール撮影も承ります。",
       img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop"
     },
     {
