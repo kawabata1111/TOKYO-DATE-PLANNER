@@ -53,14 +53,14 @@ export const ServiceSection: React.FC = () => {
       title: "Exclusive Events",
       jpTitle: "出会いの場の提供",
       desc: "厳選されたメンバーだけが参加できるマッチングイベントやパーティーを企画。都内の洗練された空間で、自然な会話から始まる質の高い出会いをプロデュースします。",
-      img: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1200&auto=format&fit=crop"
+      img: "/images/events.png"
     },
     {
       id: "02",
       title: "Date Planning",
       jpTitle: "デートプランニング",
       desc: "初デートから特別な日まで、あなたに代わって最適なデートプランをご提案。レストラン予約から演出まで、成功するデートをトータルコーディネートします。",
-      img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop"
+      img: "/images/date-planning.jpg"
     },
     {
       id: "03",
