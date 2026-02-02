@@ -55,17 +55,21 @@ export const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Nav - Social Icons */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-white ${link.color} transition-colors duration-300`}
-                title={link.name}
+                className="flex flex-col items-center gap-2 group"
               >
-                <link.icon size={24} />
+                <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:border-white transition-colors duration-300">
+                  <link.icon size={20} />
+                </div>
+                <span className="text-[10px] text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wider">
+                  {link.name}
+                </span>
               </a>
             ))}
           </div>
@@ -90,9 +94,9 @@ export const Navbar: React.FC = () => {
             transition={{ type: "tween", duration: 0.4 }}
             className="fixed inset-0 bg-[#242424] z-40 flex items-center justify-center md:hidden"
           >
-            <div className="flex flex-col items-center gap-12">
+            <div className="flex flex-col items-center gap-8">
               <p className="text-gray-500 text-xs tracking-widest uppercase">Follow Us</p>
-              <div className="flex gap-10">
+              <div className="flex gap-12">
                 {socialLinks.map((link, idx) => (
                   <motion.a
                     key={link.name}
@@ -103,9 +107,14 @@ export const Navbar: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}
-                    className={`text-white ${link.color} transition-colors duration-300`}
+                    className="flex flex-col items-center gap-3"
                   >
-                    <link.icon size={36} />
+                    <div className="w-16 h-16 rounded-full border border-white/30 flex items-center justify-center text-white">
+                      <link.icon size={28} />
+                    </div>
+                    <span className="text-xs text-gray-400 tracking-wider">
+                      {link.name}
+                    </span>
                   </motion.a>
                 ))}
               </div>
