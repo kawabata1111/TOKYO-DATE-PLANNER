@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12">
-        <div className="max-w-3xl pt-24 md:pt-0">
+        <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-white text-sm md:text-base leading-relaxed md:leading-loose font-light max-w-md border-l border-white/10 pl-4 md:pl-8 mb-16 whitespace-nowrap md:whitespace-normal"
+            className="text-white text-sm md:text-base leading-relaxed md:leading-loose font-light max-w-md border-l border-white/10 pl-4 md:pl-8 mb-16 whitespace-nowrap md:whitespace-normal mt-48 md:mt-0"
           >
             運命の出会いを、東京で。<br className="block"/>
             30代・40代のための、大人の恋活・婚活サポート。<br className="block"/>
