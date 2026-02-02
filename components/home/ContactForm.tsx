@@ -1,72 +1,52 @@
 import React from 'react';
-import { Section, SectionHeading, Button } from '../ui/Common';
-import { Phone, Mail } from 'lucide-react';
+import { Section } from '../ui/Common';
+import { motion } from 'framer-motion';
+
+// LINEアイコン
+const LineIcon = ({ size = 32 }: { size?: number }) => (
+  <svg viewBox="0 0 24 24" style={{ width: size, height: size }} className="fill-current">
+    <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+  </svg>
+);
 
 export const ContactSection: React.FC = () => {
   return (
     <Section id="contact" className="border-t border-white/5 bg-[#050505]">
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-serif text-white mb-6 font-light">Find Your Partner</h2>
-        <p className="text-white font-light">
-          まずは無料カウンセリングにて、理想のパートナー像をお聞かせください。<br/>
-          運命の出会いへの第一歩を、一緒に踏み出しましょう。
-        </p>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-12 max-w-6xl mx-auto">
-        {/* Info */}
-        <div className="md:col-span-2 space-y-12 text-left md:text-right md:border-r md:border-white/10 md:pr-12 pt-4">
-          <div>
-            <h4 className="text-gold/60 text-xs font-bold tracking-widest mb-4 uppercase">Phone</h4>
-            <a href="tel:09078139711" className="block text-2xl font-display text-white hover:text-gold transition-colors">
-              090-7813-9711
-            </a>
-            <span className="text-gray-600 text-xs mt-2 block">内海（直通）</span>
-          </div>
-          
-          <div>
-            <h4 className="text-gold/60 text-xs font-bold tracking-widest mb-4 uppercase">Email</h4>
-            <a href="mailto:ap.id.1224@icloud.com" className="block text-lg font-display text-white hover:text-gold transition-colors break-all">
-              ap.id.1224@icloud.com
-            </a>
-          </div>
-        </div>
+      <div className="max-w-3xl mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h3 className="text-gold/60 text-xs font-bold tracking-[0.3em] mb-6 uppercase">Free Consultation</h3>
+          <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 font-light">Find Your Partner</h2>
+          <p className="text-white font-light leading-8 mb-12">
+            まずは無料カウンセリングにて、理想のパートナー像をお聞かせください。<br/>
+            運命の出会いへの第一歩を、一緒に踏み出しましょう。
+          </p>
+        </motion.div>
 
-        {/* Form */}
-        <form action="https://formsubmit.co/ap.id.1224@icloud.com" method="POST" className="md:col-span-3 space-y-8">
-          {/* FormSubmit Config */}
-          <input type="hidden" name="_subject" value="TOKYO DATE PLANNER: 新規お問い合わせ" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value={`${window.location.origin}/thanks`} />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <a
+            href="https://line.me/R/ti/p/@784rpvaz?ts=01311117&oat_content=url"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-4 bg-[#06C755] text-white text-lg md:text-xl font-display tracking-widest px-12 md:px-16 py-5 md:py-6 hover:bg-[#05a648] transition-all duration-300 hover:scale-105"
+          >
+            <LineIcon size={28} />
+            LINEで無料相談
+          </a>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group">
-              <label className="block text-xs text-gray-500 uppercase tracking-widest mb-2 group-focus-within:text-gold transition-colors">Name</label>
-              <input type="text" name="name" className="w-full bg-transparent border-b border-gray-800 text-white py-3 focus:border-gold focus:outline-none transition-colors rounded-none placeholder-gray-800" placeholder="お名前" required />
-            </div>
-            <div className="group">
-              <label className="block text-xs text-gray-500 uppercase tracking-widest mb-2 group-focus-within:text-gold transition-colors">Phone</label>
-              <input type="tel" name="phone" className="w-full bg-transparent border-b border-gray-800 text-white py-3 focus:border-gold focus:outline-none transition-colors rounded-none placeholder-gray-800" placeholder="電話番号" required />
-            </div>
-          </div>
-          
-          <div className="group">
-            <label className="block text-xs text-gray-500 uppercase tracking-widest mb-2 group-focus-within:text-gold transition-colors">Email</label>
-            <input type="email" name="email" className="w-full bg-transparent border-b border-gray-800 text-white py-3 focus:border-gold focus:outline-none transition-colors rounded-none placeholder-gray-800" placeholder="メールアドレス" required />
-          </div>
-
-          <div className="group">
-            <label className="block text-xs text-gray-500 uppercase tracking-widest mb-2 group-focus-within:text-gold transition-colors">Message</label>
-            <textarea name="message" rows={4} className="w-full bg-transparent border-b border-gray-800 text-white py-3 focus:border-gold focus:outline-none transition-colors rounded-none placeholder-gray-800" placeholder="ご相談内容（任意）" required></textarea>
-          </div>
-
-          <div className="pt-8">
-             <Button type="submit" variant="gold" fullWidth className="py-5">
-              SEND REQUEST
-            </Button>
-          </div>
-        </form>
+          <p className="text-gray-600 text-xs mt-8 tracking-wider">
+            お気軽にご相談ください。無理な勧誘は一切ありません。
+          </p>
+        </motion.div>
       </div>
     </Section>
   );
