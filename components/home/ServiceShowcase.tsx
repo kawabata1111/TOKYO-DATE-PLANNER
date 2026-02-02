@@ -71,7 +71,7 @@ export const ServiceSection: React.FC = () => {
       id: "04",
       title: "Personal Styling",
       jpTitle: "スタイリングサポート",
-      desc: "デートにふさわしい装いをプロがアドバイス。買い物同行やワードローブ診断で、あなたの魅力を引き出す「選ばれるスタイル」を一緒に作り上げます。",
+      desc: "全国的な実績のあるスタイリストによるコーディネート。女性は中身を見る前に\"見た目\"で判断します。今のあなたに合った外見をプロが設計します。",
       img: "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?q=80&w=1200&auto=format&fit=crop"
     }
   ];
