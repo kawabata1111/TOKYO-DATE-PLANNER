@@ -74,10 +74,10 @@ export const Navbar: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center gap-2 group"
               >
-                <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:border-white transition-colors duration-300">
+                <div className="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white">
                   <link.icon size={20} />
                 </div>
-                <span className="text-[10px] text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wider">
+                <span className="text-[10px] text-white tracking-wider">
                   {link.name}
                 </span>
               </a>
