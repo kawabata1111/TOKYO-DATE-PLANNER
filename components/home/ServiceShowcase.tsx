@@ -56,14 +56,14 @@ export const ServiceSection: React.FC = () => {
     {
       id: "02",
       title: "Date Planning",
-      jpTitle: "モテ男子を作る♥女性恋愛講師によるオンラインセミナー",
+      jpTitle: "選べる女性恋愛アドバイザーによるお悩みzoom相談室＆お食事デートトレーニング",
       desc: "オンラインだけでは終わらせません。リアリティあるお食事デートで、直接あなたに寄り添いサポートさせていただきます。",
       img: "/images/date-planning.jpg"
     },
     {
       id: "03",
       title: "Online Seminar",
-      jpTitle: "女性恋愛講師によるオンラインセミナー",
+      jpTitle: "モテ男子を作る♥女性恋愛講師によるオンラインセミナー",
       desc: "女性目線で学ぶコミュニケーション能力のスキルアップ。なぜ恋愛対象にならないのかを女性講師が解説。現状の考え方からズレを修正します。",
       img: "/images/seminar.jpg"
     },
