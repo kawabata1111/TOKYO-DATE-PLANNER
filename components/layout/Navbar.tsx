@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, ExternalLink, Play } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Instagram, ExternalLink, Play } from 'lucide-react';
 
 // stand.fmアイコン（他より少し大きめに表示）
 const StandFmIcon = ({ size = 24 }: { size?: number }) => (
@@ -58,7 +57,6 @@ const socialLinks = [
 ];
 
 export const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -70,91 +68,54 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b ${scrolled ? 'bg-[#242424]/90 backdrop-blur-xl border-white/5 py-4' : 'bg-transparent border-transparent py-6 md:py-8'}`}>
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-center md:justify-between items-center relative">
-          {/* Logo */}
-          <a href="/" className="z-50 relative group flex items-center gap-3">
-            <img src="/images/logo.png" alt="TOKYO DATE PLANNER" className="h-20 md:h-20" />
-            <h1 className="hidden md:block font-display text-xl md:text-2xl tracking-[0.2em] text-white font-bold">
-              TOKYO <span className="text-gold font-light">DATE</span> PLANNER
-            </h1>
-          </a>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 border-b ${scrolled ? 'bg-[#242424]/90 backdrop-blur-xl border-white/5 py-4' : 'bg-transparent border-transparent py-4 md:py-8'}`}>
+      <div className="max-w-7xl mx-auto px-4 md:px-12 flex justify-center md:justify-between items-center">
+        {/* Logo - Desktop only */}
+        <a href="/" className="hidden md:flex z-50 relative group items-center gap-3">
+          <img src="/images/logo.png" alt="TOKYO DATE PLANNER" className="h-20" />
+          <h1 className="font-display text-xl md:text-2xl tracking-[0.2em] text-white font-bold">
+            TOKYO <span className="text-gold font-light">DATE</span> PLANNER
+          </h1>
+        </a>
 
-          {/* Desktop Nav - Social Icons */}
-          <div className="hidden md:flex items-center gap-10">
-            {socialLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="flex flex-col items-center gap-2 group"
-              >
-                <div className="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white">
-                  <link.icon size={20} />
-                </div>
-                <span className="text-[10px] text-white tracking-wider">
-                  {link.name}
-                </span>
-              </a>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden absolute right-6 text-white z-50 hover:text-gold transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile Nav Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: "tween", duration: 0.4 }}
-            className="fixed inset-0 bg-[#242424] z-40 flex items-center justify-center md:hidden"
-          >
-            <div className="flex flex-col items-center gap-8">
-              <p className="text-gray-500 text-xs tracking-widest uppercase">Follow Us</p>
-              <div className="flex flex-wrap justify-center gap-8">
-                {socialLinks.map((link, idx) => (
-                  <motion.a
-                    key={link.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 * idx }}
-                    href={link.href}
-                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    onClick={() => setIsOpen(false)}
-                    className="flex flex-col items-center gap-3"
-                  >
-                    <div className="w-16 h-16 rounded-full border border-white/30 flex items-center justify-center text-white">
-                      <link.icon size={28} />
-                    </div>
-                    <span className="text-xs text-gray-400 tracking-wider">
-                      {link.name}
-                    </span>
-                  </motion.a>
-                ))}
+        {/* Mobile - Icons only */}
+        <div className="flex md:hidden items-center gap-4">
+          {socialLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              className="flex flex-col items-center gap-1"
+            >
+              <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white">
+                <link.icon size={16} />
               </div>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="text-gray-600 text-sm mt-4"
-              >
-                お気軽にフォロー・ご相談ください
-              </motion.p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+              <span className="text-[8px] text-white tracking-wider">
+                {link.name}
+              </span>
+            </a>
+          ))}
+        </div>
+
+        {/* Desktop - Icons */}
+        <div className="hidden md:flex items-center gap-10">
+          {socialLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              className="flex flex-col items-center gap-2 group"
+            >
+              <div className="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white">
+                <link.icon size={20} />
+              </div>
+              <span className="text-[10px] text-white tracking-wider">
+                {link.name}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </nav>
   );
 };
