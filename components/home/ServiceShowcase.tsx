@@ -35,9 +35,7 @@ export const ProblemSection: React.FC = () => {
               出会いの場と機会が足りないだけ。<br/>
             </p>
             <p className="text-white leading-8 font-light text-sm md:text-base border-l border-white/10 pl-6">
-              TOKYO DATE PLANNERは、<br/>
-              厳選された出会いの場と、あなたの魅力を最大化するサポートで<br/>
-              理想のパートナーとの出会いを実現します。
+              TOKYO DATE PLANNERは、厳選された出会いの場と、あなたの魅力を最大化するサポートで、理想のパートナーとの出会いを実現します。
             </p>
           </motion.div>
         </div>
