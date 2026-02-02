@@ -49,8 +49,8 @@ export const ServiceSection: React.FC = () => {
     {
       id: "01",
       title: "Exclusive Events",
-      jpTitle: "出会いの場の提供",
-      desc: "厳選されたメンバーだけが参加できるマッチングイベントやパーティーを企画。都内の洗練された空間で、自然な会話から始まる質の高い出会いをプロデュースします。",
+      jpTitle: "出会いの場を提供🥂恋活＆婚活食事会",
+      desc: "外見・内面を磨いたのち、実際の出会いの場をご提供します。その後のアフターフォローも充実しております。",
       img: "/images/events.png"
     },
     {
