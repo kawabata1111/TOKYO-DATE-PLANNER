@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Headphones } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+
+// stand.fmアイコン
+const StandFmIcon = ({ size = 24 }: { size?: number }) => (
+  <img
+    src="/images/standfm-icon.png"
+    alt="stand.fm"
+    style={{ width: size, height: size }}
+    className="invert"
+  />
+);
 
 // LINEアイコン
 const LineIcon = ({ size = 24 }: { size?: number }) => (
@@ -13,7 +23,7 @@ const socialLinks = [
   {
     name: 'stand.fm',
     href: 'https://stand.fm/channels/69724fe28d01e8272ccc2c13',
-    icon: Headphones,
+    icon: StandFmIcon,
     color: 'hover:text-yellow-400'
   },
   {
