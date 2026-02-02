@@ -65,7 +65,7 @@ export const ServiceSection: React.FC = () => {
       title: "Online Seminar",
       jpTitle: "女性恋愛講師によるオンラインセミナー",
       desc: "女性目線で学ぶコミュニケーション能力のスキルアップ。なぜ恋愛対象にならないのかを女性講師が解説。現状の考え方からズレを修正します。",
-      img: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop"
+      img: "/images/seminar.jpg"
     },
     {
       id: "04",
