@@ -11,6 +11,12 @@ const LineIcon = ({ size = 24 }: { size?: number }) => (
 
 const socialLinks = [
   {
+    name: 'stand.fm',
+    href: 'https://stand.fm/channels/69724fe28d01e8272ccc2c13',
+    icon: Headphones,
+    color: 'hover:text-yellow-400'
+  },
+  {
     name: 'Instagram',
     href: 'https://www.instagram.com/tokyodateplanner?igsh=ZHU0bTZ0a3h0dThy&utm_source=qr',
     icon: Instagram,
@@ -21,12 +27,6 @@ const socialLinks = [
     href: 'https://line.me/R/ti/p/@784rpvaz?ts=01311117&oat_content=url',
     icon: LineIcon,
     color: 'hover:text-[#06C755]'
-  },
-  {
-    name: 'stand.fm',
-    href: 'https://stand.fm/channels/69724fe28d01e8272ccc2c13',
-    icon: Headphones,
-    color: 'hover:text-yellow-400'
   },
 ];
 
