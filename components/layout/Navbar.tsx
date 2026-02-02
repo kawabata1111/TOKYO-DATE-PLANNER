@@ -79,18 +79,18 @@ export const Navbar: React.FC = () => {
         </a>
 
         {/* Mobile - Icons (appear on scroll) */}
-        <div className={`flex md:hidden items-center gap-4 transition-all duration-500 ${scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+        <div className={`flex md:hidden w-full justify-evenly items-center transition-all duration-500 ${scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
           {socialLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="flex flex-col items-center gap-1"
+              className="flex flex-col items-center gap-1 min-w-[50px]"
             >
-              <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white">
-                <link.icon size={16} />
+              <div className="w-9 h-9 rounded-full border border-white flex items-center justify-center text-white">
+                <link.icon size={14} />
               </div>
-              <span className="text-[8px] text-white tracking-wider">
+              <span className="text-[7px] text-white tracking-wider whitespace-nowrap">
                 {link.name}
               </span>
             </a>
