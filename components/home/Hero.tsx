@@ -113,7 +113,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-white text-sm md:text-base leading-relaxed md:leading-loose font-light max-w-md border-l border-white/10 pl-4 md:pl-8 mb-16 whitespace-nowrap md:whitespace-normal"
+            className="text-white text-sm md:text-base leading-relaxed md:leading-loose font-light max-w-md border-l border-white/10 pl-4 md:pl-8 mb-16 whitespace-nowrap md:whitespace-normal mt-40 md:mt-0"
           >
             運命の出会いを、東京で。<br className="block"/>
             30代・40代のための、大人の恋活・婚活サポート。<br className="block"/>
