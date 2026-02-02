@@ -11,6 +11,7 @@ import { Footer } from './components/layout/Footer';
 import { LegalPage } from './components/legal/LegalPage';
 import { PrivacyPolicy } from './components/legal/PrivacyPolicy';
 import { ThanksPage } from './components/home/ThanksPage';
+import { VideoPage } from './components/home/VideoPage';
 
 // トップに戻るボタン
 const ScrollToTop = () => {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/legal" element={<LegalPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/thanks" element={<ThanksPage />} />
+          <Route path="/video" element={<VideoPage />} />
         </Routes>
 
         <Footer />

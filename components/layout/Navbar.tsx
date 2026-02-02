@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, ExternalLink } from 'lucide-react';
+import { Menu, X, Instagram, ExternalLink, Play } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // stand.fmアイコン（他より少し大きめに表示）
@@ -24,25 +24,36 @@ const socialLinks = [
     name: '公式LP',
     href: 'https://tokyodateplanner.com/',
     icon: ExternalLink,
-    color: 'hover:text-gold'
+    color: 'hover:text-gold',
+    external: true
+  },
+  {
+    name: '紹介動画',
+    href: '/video',
+    icon: Play,
+    color: 'hover:text-gold',
+    external: false
   },
   {
     name: 'stand.fm',
     href: 'https://stand.fm/channels/69724fe28d01e8272ccc2c13',
     icon: StandFmIcon,
-    color: 'hover:text-yellow-400'
+    color: 'hover:text-yellow-400',
+    external: true
   },
   {
     name: 'Instagram',
     href: 'https://www.instagram.com/tokyodateplanner?igsh=ZHU0bTZ0a3h0dThy&utm_source=qr',
     icon: Instagram,
-    color: 'hover:text-pink-400'
+    color: 'hover:text-pink-400',
+    external: true
   },
   {
     name: 'LINE',
     href: 'https://line.me/R/ti/p/@784rpvaz?ts=01311117&oat_content=url',
     icon: LineIcon,
-    color: 'hover:text-[#06C755]'
+    color: 'hover:text-[#06C755]',
+    external: true
   },
 ];
 
@@ -76,8 +87,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="flex flex-col items-center gap-2 group"
               >
                 <div className="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white">
@@ -112,7 +122,7 @@ export const Navbar: React.FC = () => {
           >
             <div className="flex flex-col items-center gap-8">
               <p className="text-gray-500 text-xs tracking-widest uppercase">Follow Us</p>
-              <div className="flex gap-12">
+              <div className="flex flex-wrap justify-center gap-8">
                 {socialLinks.map((link, idx) => (
                   <motion.a
                     key={link.name}
@@ -120,8 +130,7 @@ export const Navbar: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 * idx }}
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     onClick={() => setIsOpen(false)}
                     className="flex flex-col items-center gap-3"
                   >
