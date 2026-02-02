@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12">
-        <div className="max-w-3xl pt-48 md:pt-0">
+        <div className="max-w-3xl pt-24 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
