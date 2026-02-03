@@ -34,13 +34,6 @@ const socialLinks = [
     external: false
   },
   {
-    name: 'stand.fm',
-    href: 'https://stand.fm/channels/69724fe28d01e8272ccc2c13',
-    icon: StandFmIcon,
-    color: 'hover:text-yellow-400',
-    external: true
-  },
-  {
     name: 'Instagram',
     href: 'https://www.instagram.com/tokyodateplanner?igsh=ZHU0bTZ0a3h0dThy&utm_source=qr',
     icon: Instagram,
@@ -48,10 +41,10 @@ const socialLinks = [
     external: true
   },
   {
-    name: 'LINE',
-    href: 'https://line.me/R/ti/p/@784rpvaz?ts=01311117&oat_content=url',
-    icon: LineIcon,
-    color: 'hover:text-[#06C755]',
+    name: 'stand.fm',
+    href: 'https://stand.fm/channels/69724fe28d01e8272ccc2c13',
+    icon: StandFmIcon,
+    color: 'hover:text-yellow-400',
     external: true
   },
 ];

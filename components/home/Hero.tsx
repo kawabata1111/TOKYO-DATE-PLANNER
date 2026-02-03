@@ -85,7 +85,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-[1.1] mb-10 tracking-wide flex flex-col items-end md:items-start relative top-16 md:top-0"
+            className="text-3xl md:text-5xl lg:text-6xl font-serif text-white leading-[1.1] mb-10 tracking-wide flex flex-col items-end md:items-start relative top-16 md:top-0"
           >
             <span className="block overflow-hidden">
               <motion.span
@@ -94,7 +94,7 @@ export const Hero: React.FC = () => {
                 transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 className="block font-light"
               >
-                Find Your
+                もっと理想の<br/>出会いを
               </motion.span>
             </span>
             <span className="block overflow-hidden">
@@ -102,9 +102,9 @@ export const Hero: React.FC = () => {
                 initial={{ y: 100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                className="block italic text-gold-gradient font-display pr-4"
+                className="block text-gold-gradient font-display pr-4"
               >
-                One.
+                もっと輝きたい<br/>あなたへ
               </motion.span>
             </span>
           </motion.h1>
@@ -124,7 +124,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="flex flex-col md:flex-row gap-6 items-start"
+            className="flex flex-col md:flex-row gap-3 md:gap-6 items-start"
           >
             <a
               href="https://line.me/R/ti/p/@784rpvaz?ts=01311117&oat_content=url"

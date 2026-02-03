@@ -45,7 +45,14 @@ export const ProblemSection: React.FC = () => {
 };
 
 export const ServiceSection: React.FC = () => {
-  const services = [
+  const services: Array<{
+    id: string;
+    title: string;
+    jpTitle: string;
+    desc: string;
+    img: string;
+    vip?: boolean;
+  }> = [
     {
       id: "01",
       title: "Personal Styling",
@@ -55,24 +62,24 @@ export const ServiceSection: React.FC = () => {
     },
     {
       id: "02",
-      title: "Date Planning",
-      jpTitle: "選べる女性恋愛アドバイザーによるお悩みzoom相談室＆お食事デートトレーニング",
-      desc: "オンラインだけでは終わらせません。リアリティあるお食事デートで、直接あなたに寄り添いサポートさせていただきます。",
-      img: "/images/date-planning.jpg"
+      title: "Profile Creation",
+      jpTitle: "プロフィール写真撮影",
+      desc: "某有名番組、フェスまで担当する撮影チームで構成。マッチングアプリだけでなく、ビジネスで使えるプロフィール撮影も承ります。",
+      img: "/images/profile-creation.png"
     },
     {
       id: "03",
+      title: "Date Planning",
+      jpTitle: "選べる女性恋愛アドバイザーによるお悩みzoom相談室＆お食事デートトレーニング",
+      desc: "オンラインだけでは終わらせません。リアリティあるお食事デートで、直接あなたに寄り添いサポートさせていただきます。",
+      img: "/images/date-planning.png"
+    },
+    {
+      id: "04",
       title: "Online Seminar",
       jpTitle: "モテ男子を作る♥女性恋愛講師によるオンラインセミナー",
       desc: "女性目線で学ぶコミュニケーション能力のスキルアップ。なぜ恋愛対象にならないのかを女性講師が解説。現状の考え方からズレを修正します。",
       img: "/images/seminar.jpg"
-    },
-    {
-      id: "04",
-      title: "Profile Creation",
-      jpTitle: "プロフィール作成支援",
-      desc: "某有名番組、フェスまで担当する撮影チームで構成。マッチングアプリだけでなく、ビジネスで使えるプロフィール撮影も承ります。",
-      img: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop"
     },
     {
       id: "05",
@@ -80,6 +87,14 @@ export const ServiceSection: React.FC = () => {
       jpTitle: "出会いの場を提供\n恋活＆婚活食事会",
       desc: "外見・内面を磨いたのち、実際の出会いの場をご提供します。その後のアフターフォローも充実しております。",
       img: "/images/events.png"
+    },
+    {
+      id: "06",
+      title: "Personal Introduction",
+      jpTitle: "個別紹介",
+      desc: "あなたのお好みの女性像をヒアリングし、理想のパートナーを個別でご紹介",
+      img: "/images/introduction.jpg",
+      vip: true
     }
   ];
 
@@ -91,7 +106,7 @@ export const ServiceSection: React.FC = () => {
         {services.map((service, idx) => (
           <div key={idx} className={`flex flex-col md:flex-row gap-16 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
             {/* Image */}
-            <motion.div 
+            <motion.div
               className="w-full md:w-1/2 relative group"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -99,9 +114,9 @@ export const ServiceSection: React.FC = () => {
               transition={{ duration: 1 }}
             >
               <div className="aspect-[3/4] overflow-hidden relative bg-[#2e2e2e]">
-                <img 
-                  src={service.img} 
-                  alt={service.title} 
+                <img
+                  src={service.img}
+                  alt={service.title}
                   loading="lazy"
                   width="1200"
                   height="1600"
@@ -126,6 +141,11 @@ export const ServiceSection: React.FC = () => {
               <p className="text-white leading-8 font-serif mb-10 text-left md:text-justify max-w-md">
                 {service.desc}
               </p>
+              {service.vip && (
+                <p className="text-gold/80 text-sm font-light">
+                  ※ 上級VIPコース限定
+                </p>
+              )}
             </motion.div>
           </div>
         ))}

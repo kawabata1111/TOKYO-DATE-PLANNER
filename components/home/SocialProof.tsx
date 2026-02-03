@@ -98,10 +98,6 @@ export const ProfileSection: React.FC = () => {
                   <dt className="text-gray-500">設立</dt>
                   <dd className="text-gray-300 col-span-2 md:col-span-3">2026年</dd>
                 </div>
-                 <div className="grid grid-cols-3 md:grid-cols-4 border-b border-gray-900 pb-4">
-                  <dt className="text-gray-500">従業員数</dt>
-                  <dd className="text-gray-300 col-span-2 md:col-span-3">1名（他、提携キャスト）</dd>
-                </div>
                 <div className="grid grid-cols-3 md:grid-cols-4 border-b border-gray-900 pb-4">
                   <dt className="text-gray-500">事業内容</dt>
                   <dd className="text-gray-300 col-span-2 md:col-span-3 leading-relaxed">
