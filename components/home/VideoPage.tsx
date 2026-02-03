@@ -1,10 +1,59 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Play } from 'lucide-react';
+
+const VideoPlayer: React.FC<{ src: string; vertical: boolean; cropRight?: boolean }> = ({ src, vertical, cropRight }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handleClick = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
+
+  return (
+    <div className={`relative ${cropRight ? 'overflow-hidden' : ''}`}>
+      <video
+        ref={videoRef}
+        controls
+        className={`${vertical ? 'w-full h-auto' : 'w-full max-h-[90vh] object-contain'}`}
+        style={cropRight ? { clipPath: 'inset(0 2px 0 0)' } : undefined}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+        onEnded={() => setIsPlaying(false)}
+        playsInline
+      >
+        <source src={src} type="video/mp4" />
+        お使いのブラウザは動画再生に対応していません。
+      </video>
+      {!isPlaying && (
+        <div
+          className="absolute top-0 left-0 right-0 bottom-12 flex items-center justify-center bg-black/30 cursor-pointer"
+          onClick={handleClick}
+        >
+          <div className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center">
+            <Play className="w-10 h-10 text-black ml-1" fill="black" />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export const VideoPage: React.FC = () => {
   const videos = [
-    { src: '/videos/intro1.mp4', title: '紹介動画 1' },
-    { src: '/videos/intro2.mp4', title: '紹介動画 2' },
+    { src: '/videos/intro1.mp4', title: '紹介動画 1', vertical: false },
+    { src: '/videos/intro4.mp4', title: '紹介動画 4', vertical: true },
+    { src: '/videos/intro3.mp4', title: '紹介動画 3', vertical: true },
+    { src: '/videos/intro5.mp4', title: '紹介動画 5', vertical: true, cropRight: true },
+    { src: '/videos/intro2.mp4', title: '紹介動画 2', vertical: true },
   ];
 
   return (
@@ -27,16 +76,9 @@ export const VideoPage: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: idx * 0.2 }}
-              className="bg-[#1a1a1a] border border-white/10 overflow-hidden flex justify-center"
+              className={`overflow-hidden flex justify-center ${video.vertical ? 'max-w-sm mx-auto' : ''}`}
             >
-              <video
-                controls
-                className="w-full max-h-[70vh] object-contain"
-                poster=""
-              >
-                <source src={video.src} type="video/mp4" />
-                お使いのブラウザは動画再生に対応していません。
-              </video>
+              <VideoPlayer src={video.src} vertical={video.vertical} cropRight={video.cropRight} />
             </motion.div>
           ))}
         </div>
