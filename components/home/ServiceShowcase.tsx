@@ -18,24 +18,27 @@ export const ProblemSection: React.FC = () => {
         </div>
 
         {/* Text Side */}
-        <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center bg-[#050505] relative z-10">
+        <div className="w-full md:w-1/2 p-6 md:p-24 flex flex-col justify-center bg-[#050505] relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-gold/60 text-xs font-light tracking-[0.4em] mb-8 uppercase">Our Philosophy</h3>
-            <h2 className="text-3xl md:text-5xl font-serif text-white mb-10 leading-tight font-light">
+            <h3 className="text-gold/60 text-xs font-light tracking-[0.4em] mb-6 md:mb-8 uppercase">Our Philosophy</h3>
+            <h2 className="text-3xl md:text-5xl font-serif text-white mb-6 md:mb-10 leading-tight font-light">
               素敵な出会いは、<br/>
               偶然じゃない。
             </h2>
-            <p className="text-white leading-8 font-light mb-8 text-sm md:text-base border-l border-white/10 pl-6">
+            <p className="text-white leading-7 md:leading-8 font-light mb-6 md:mb-8 text-sm md:text-base border-l border-white/10 pl-4 md:pl-6">
               「いい人がいない」のではなく、<br/>
-              出会いの場と機会が足りないだけ。<br/>
+              出会いの場と機会が足りないだけ。
             </p>
-            <p className="text-white leading-8 font-light text-sm md:text-base border-l border-white/10 pl-6">
-              TOKYO DATE PLANNERは、厳選された出会いの場と、あなたの魅力を最大化するサポートで、理想のパートナーとの出会いを実現します。
+            <p className="text-white leading-7 md:leading-8 font-light text-sm md:text-base border-l border-white/10 pl-4 md:pl-6">
+              TOKYO DATE PLANNERは、<br className="md:hidden"/>
+              厳選された出会いの場と、<br className="md:hidden"/>
+              あなたの魅力を最大化するサポートで、<br className="md:hidden"/>
+              理想のパートナーとの出会いを実現します。
             </p>
           </motion.div>
         </div>
