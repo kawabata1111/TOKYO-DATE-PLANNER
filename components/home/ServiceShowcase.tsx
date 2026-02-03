@@ -48,10 +48,10 @@ export const ServiceSection: React.FC = () => {
   const services = [
     {
       id: "01",
-      title: "Exclusive Events",
-      jpTitle: "出会いの場を提供\n恋活＆婚活食事会",
-      desc: "外見・内面を磨いたのち、実際の出会いの場をご提供します。その後のアフターフォローも充実しております。",
-      img: "/images/events.png"
+      title: "Personal Styling",
+      jpTitle: "スタイリングサポート",
+      desc: "全国的な実績のあるスタイリストによるコーディネート。女性は中身を見る前に\"見た目\"で判断します。今のあなたに合った外見をプロが設計します。",
+      img: "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?q=80&w=1200&auto=format&fit=crop"
     },
     {
       id: "02",
@@ -76,10 +76,10 @@ export const ServiceSection: React.FC = () => {
     },
     {
       id: "05",
-      title: "Personal Styling",
-      jpTitle: "スタイリングサポート",
-      desc: "全国的な実績のあるスタイリストによるコーディネート。女性は中身を見る前に\"見た目\"で判断します。今のあなたに合った外見をプロが設計します。",
-      img: "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?q=80&w=1200&auto=format&fit=crop"
+      title: "Exclusive Events",
+      jpTitle: "出会いの場を提供\n恋活＆婚活食事会",
+      desc: "外見・内面を磨いたのち、実際の出会いの場をご提供します。その後のアフターフォローも充実しております。",
+      img: "/images/events.png"
     }
   ];
 
