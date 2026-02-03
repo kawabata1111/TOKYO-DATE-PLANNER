@@ -58,7 +58,7 @@ export const ProfileSection: React.FC = () => {
         <div className="w-full md:w-5/12 h-[300px] md:h-auto min-h-[300px] md:min-h-[500px] relative">
           <div className="absolute inset-0 bg-[#050505]/20 z-10" />
           <img 
-            src="/images/profile.jpg"
+            src="/images/profile.png"
             alt="内海 亮" 
             loading="lazy"
             className="w-full h-full object-cover"
