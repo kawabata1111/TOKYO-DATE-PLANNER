@@ -22,7 +22,7 @@ export const ContactSection: React.FC = () => {
           <h3 className="text-gold/60 text-xs font-bold tracking-[0.3em] mb-6 uppercase">Free Consultation</h3>
           <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 font-light">Find Your Partner</h2>
           <p className="text-white font-light leading-8 mb-12">
-            まずは無料カウンセリングにて、理想のパートナー像をお聞かせください。<br/>
+            まずは無料カウンセリングにて、あなたのお悩みをお聞かせください。<br/>
             運命の出会いへの第一歩を、一緒に踏み出しましょう。
           </p>
         </motion.div>

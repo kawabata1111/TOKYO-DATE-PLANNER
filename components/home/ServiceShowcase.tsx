@@ -95,7 +95,7 @@ export const ServiceSection: React.FC = () => {
       id: "06",
       title: "Personal Introduction",
       jpTitle: "個別紹介",
-      desc: "あなたのお好みの女性像をヒアリングし、理想のパートナーを個別でご紹介",
+      desc: "あなたのお好みの女性像をヒアリングし、理想のパートナーを個別でご紹介します。",
       img: "/images/introduction.jpg",
       vip: true
     }

@@ -62,63 +62,56 @@ export const SuccessSection: React.FC = () => {
 
 export const ProfileSection: React.FC = () => {
   return (
-    <Section className="py-0 md:py-0 overflow-hidden" noPadding>
-      <div className="flex flex-col md:flex-row h-full">
-        {/* Image Section */}
-        <div className="w-full md:w-5/12 h-[300px] md:h-auto min-h-[300px] md:min-h-[500px] relative">
-          <div className="absolute inset-0 bg-[#050505]/20 z-10" />
-          <img 
-            src="/images/profile.png"
-            alt="内海 亮" 
-            loading="lazy"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        
-        {/* Text Section */}
-        <div className="w-full md:w-7/12 bg-[#050505] px-8 py-10 md:p-24 flex flex-col justify-center border-l border-white/5">
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-gold/60 text-xs font-bold tracking-[0.3em] mb-4 uppercase">Representative</h3>
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-2">
-              内海 亮
-            </h2>
-            <p className="text-gray-500 font-display text-xl tracking-widest mb-10">RYO UTSUMI</p>
-            
-            <p className="text-white leading-8 mb-6 font-serif text-justify border-l border-white/10 pl-6">
-              「素敵な出会いは、準備と環境で決まる」を信条に、TOKYO DATE PLANNERを設立。
-              厳選された出会いの場の提供から、スタイリング、コミュニケーションまで、理想のパートナーとの出会いをトータルサポート。
-            </p>
-            
-            <div className="mt-16">
-              <h4 className="text-white font-serif text-lg mb-6 border-b border-gray-800 pb-2 inline-block">会社概要</h4>
-              <dl className="grid grid-cols-1 gap-x-8 gap-y-4 text-sm font-serif">
-                <div className="grid grid-cols-3 md:grid-cols-4 border-b border-gray-900 pb-4">
-                  <dt className="text-gray-500">事業名</dt>
-                  <dd className="text-gray-300 col-span-2 md:col-span-3">TOKYO DATE PLANNER</dd>
-                </div>
-                <div className="grid grid-cols-3 md:grid-cols-4 border-b border-gray-900 pb-4">
-                  <dt className="text-gray-500">代表者</dt>
-                  <dd className="text-gray-300 col-span-2 md:col-span-3">内海 亮</dd>
-                </div>
-                <div className="grid grid-cols-3 md:grid-cols-4 border-b border-gray-900 pb-4">
-                  <dt className="text-gray-500">設立</dt>
-                  <dd className="text-gray-300 col-span-2 md:col-span-3">2026年</dd>
-                </div>
-                <div className="grid grid-cols-3 md:grid-cols-4 border-b border-gray-900 pb-4">
-                  <dt className="text-gray-500">事業内容</dt>
-                  <dd className="text-gray-300 col-span-2 md:col-span-3 leading-relaxed">
-                    30代・40代婚活男性をターゲットとした婚活支援サービス<br/>
-                    (ファッションコンサル / 写真撮影 / 出会いの場の提供 / コミュニケーショントレーニング等)
-                  </dd>
-                </div>
-              </dl>
+    <Section className="bg-[#050505]">
+      <div className="max-w-3xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h3 className="text-gold/60 text-xs font-bold tracking-[0.3em] mb-4 uppercase">Representative</h3>
+          <h2 className="text-4xl md:text-5xl font-serif text-white mb-2">
+            内海 亮
+          </h2>
+          <p className="text-gray-500 font-display text-xl tracking-widest mb-10">RYO UTSUMI</p>
+
+          <p className="text-white leading-8 mb-12 font-serif text-center max-w-xl mx-auto">
+            「素敵な出会いは、準備と環境で決まる」を信条に、TOKYO DATE PLANNERを設立。
+            厳選された出会いの場の提供から、スタイリング、コミュニケーションまで、理想のパートナーとの出会いをトータルサポート。
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mt-16"
+        >
+          <h4 className="text-white font-serif text-lg mb-8 border-b border-gray-800 pb-2 text-center">運営情報</h4>
+          <dl className="grid grid-cols-1 gap-y-4 text-sm font-serif max-w-xl mx-auto">
+            <div className="grid grid-cols-3 border-b border-gray-900 pb-4">
+              <dt className="text-gray-500">事業名</dt>
+              <dd className="text-gray-300 col-span-2">TOKYO DATE PLANNER</dd>
             </div>
-          </motion.div>
-        </div>
+            <div className="grid grid-cols-3 border-b border-gray-900 pb-4">
+              <dt className="text-gray-500">代表者</dt>
+              <dd className="text-gray-300 col-span-2">内海 亮</dd>
+            </div>
+            <div className="grid grid-cols-3 border-b border-gray-900 pb-4">
+              <dt className="text-gray-500">設立</dt>
+              <dd className="text-gray-300 col-span-2">2026年</dd>
+            </div>
+            <div className="grid grid-cols-3 border-b border-gray-900 pb-4">
+              <dt className="text-gray-500">事業内容</dt>
+              <dd className="text-gray-300 col-span-2 leading-relaxed">
+                30代・40代婚活男性をターゲットとした婚活支援サービス<br/>
+                (ファッションコンサル / 写真撮影 / 出会いの場の提供 / コミュニケーショントレーニング等)
+              </dd>
+            </div>
+          </dl>
+        </motion.div>
       </div>
     </Section>
   );
