@@ -36,7 +36,6 @@ const HomePage = () => (
     <ServiceSection />
     <SuccessSection />
     <PricingSection />
-    <ProfileSection />
     <FaqSection />
     <ContactSection />
   </main>

@@ -54,14 +54,16 @@ export const ServiceSection: React.FC = () => {
     jpTitle: string;
     desc: string;
     img: string;
+    img2?: string;
     vip?: boolean;
   }> = [
     {
       id: "01",
       title: "Personal Styling",
       jpTitle: "スタイリングサポート",
-      desc: "全国的な実績のあるスタイリストによるコーディネート。女性は中身を見る前に\"見た目\"で判断します。今のあなたに合った外見をプロが設計します。",
-      img: "/images/profile.jpg"
+      desc: "全国的な実績のあるスタイリストによるコーディネート。女性は中身を見る前に\"見た目\"で判断します。今のあなたに合った外見をプロが設計します。提携美容院でのヘアカットや眉毛の改善まで、トータルであなたの魅力を引き出します。",
+      img: "/images/profile.jpg",
+      img2: "/images/salon.jpg"
     },
     {
       id: "02",
@@ -116,17 +118,40 @@ export const ServiceSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 1 }}
             >
-              <div className="aspect-[3/4] overflow-hidden relative bg-[#2e2e2e]">
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  loading="lazy"
-                  width="1200"
-                  height="1600"
-                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 border border-white/5 pointer-events-none" />
-              </div>
+              {service.img2 ? (
+                <div className="grid grid-cols-5 gap-3 h-full">
+                  <div className="col-span-3 overflow-hidden relative bg-[#2e2e2e]">
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 border border-white/5 pointer-events-none" />
+                  </div>
+                  <div className="col-span-2 overflow-hidden relative bg-[#2e2e2e]">
+                    <img
+                      src={service.img2}
+                      alt={`${service.title} - salon`}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 border border-white/5 pointer-events-none" />
+                  </div>
+                </div>
+              ) : (
+                <div className="aspect-[3/4] overflow-hidden relative bg-[#2e2e2e]">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    loading="lazy"
+                    width="1200"
+                    height="1600"
+                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 border border-white/5 pointer-events-none" />
+                </div>
+              )}
             </motion.div>
 
             {/* Content */}
