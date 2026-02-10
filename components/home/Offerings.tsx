@@ -99,7 +99,7 @@ export const PricingSection: React.FC = () => {
         "ファッションオンラインサービス",
         "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
         "理想のパートナーを個別で直接ご紹介（マンツーマンでのパートナー探し全面協力）",
-        "女性モデルによるお悩みzoom相談室（毎月開催）",
+        "女性アドバイザーによるお悩みzoom相談室（毎月開催）",
         "女性アドバイザーによるリアルデートトレーニング（年4回）",
         "女性恋愛講師によるオンラインセミナー"
       ],
@@ -226,7 +226,7 @@ const FaqItem: React.FC<{ question: string; answer: string }> = ({ question, ans
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
-            <p className="text-gray-500 pb-8 leading-8 font-serif pl-0 md:pl-4 text-sm md:text-base border-l border-gray-900 ml-2 mb-4">
+            <p className="text-gray-500 pb-8 leading-8 font-serif pl-0 md:pl-4 text-sm md:text-base border-l border-gray-900 ml-2 mb-4 whitespace-pre-line">
               {answer}
             </p>
           </motion.div>
@@ -238,7 +238,7 @@ const FaqItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 
 export const FaqSection: React.FC = () => {
   const faqs = [
-    { q: "どんな方が参加されていますか？", a: "業種も職種もバラバラですが、30代・40代で真剣に出会い求める方々が中心です。入会時に審査を設け、質の高いコミュニティを維持しています。" },
+    { q: "どんな方が参加されていますか？", a: "業種も職種も様々ですが、30代・40代で真剣に出会いを求めてる方々が中心です。入会時に審査を設け、質の高いコミュニティを維持しています。" },
     { q: "無料相談では何をしますか？", a: "約60分間、オンラインまたは対面にて、理想のパートナー像や現状の課題をヒアリング。あなたに最適な出会いのプランをご提案します。無理な勧誘は一切ありません。" },
     { q: "イベントはどのような形式ですか？", a: "少人数制のディナーパーティーや、趣味を共有できるアクティビティなど、自然な会話が生まれる形式を採用。「婚活パーティー感」のない、大人の社交の場です。" },
     { q: "成婚率はどのくらいですか？", a: "6ヶ月以内にお付き合いを開始される方が約70%、1年以内の成婚率は約45%です。一人ひとりに寄り添ったサポートで、質の高い出会いを実現しています。" }

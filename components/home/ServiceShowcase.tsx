@@ -61,7 +61,7 @@ export const ServiceSection: React.FC = () => {
       id: "01",
       title: "Personal Styling",
       jpTitle: "スタイリングサポート",
-      desc: "全国的な実績のあるスタイリストによるトータルコーディネート。\n女性は中身を見る前に\"見た目\"で判断します。\nファッションから提携美容サロンでのヘアカット＆眉毛の改善まで\nトータルであなたの魅力を引き出します。",
+      desc: "全国的な実績のあるスタイリストによるトータルコーディネート。女性は中身を見る前に\"見た目\"で判断します。ファッションから提携美容サロンでのヘアカット＆眉毛の改善までトータルであなたの魅力を引き出します。",
       img: "/images/profile.jpg",
       img2: "/images/salon.jpg"
     },
@@ -109,18 +109,18 @@ export const ServiceSection: React.FC = () => {
       
       <div className="space-y-32">
         {services.map((service, idx) => (
-          <div key={idx} className={`flex flex-col md:flex-row gap-16 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-            {/* Image */}
-            <motion.div
-              className="w-full md:w-1/2 relative group"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-            >
-              {service.img2 ? (
-                <div className="grid grid-cols-5 gap-3 h-full">
-                  <div className="col-span-3 overflow-hidden relative bg-[#2e2e2e]">
+          service.img2 ? (
+            /* 2枚画像レイアウト: 画像横並び + テキスト下 */
+            <div key={idx}>
+              <motion.div
+                className="w-full relative group"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="aspect-square overflow-hidden relative bg-[#2e2e2e]">
                     <img
                       src={service.img}
                       alt={service.title}
@@ -129,7 +129,7 @@ export const ServiceSection: React.FC = () => {
                     />
                     <div className="absolute inset-0 border border-white/5 pointer-events-none" />
                   </div>
-                  <div className="col-span-2 overflow-hidden relative bg-[#2e2e2e]">
+                  <div className="aspect-square overflow-hidden relative bg-[#2e2e2e]">
                     <img
                       src={service.img2}
                       alt={`${service.title} - salon`}
@@ -139,7 +139,34 @@ export const ServiceSection: React.FC = () => {
                     <div className="absolute inset-0 border border-white/5 pointer-events-none" />
                   </div>
                 </div>
-              ) : (
+              </motion.div>
+
+              <motion.div
+                className="mt-12 max-w-2xl mx-auto md:pl-24"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                <span className="text-gray-500 text-[10px] tracking-[0.4em] uppercase block mb-6">{service.id} — {service.title}</span>
+                <h4 className="text-[28px] sm:text-3xl md:text-4xl font-serif text-white mb-8 leading-tight whitespace-pre-line tracking-tight md:tracking-normal">
+                  {service.jpTitle}
+                </h4>
+                <p className="text-white leading-8 font-serif mb-10 whitespace-pre-line">
+                  {service.desc}
+                </p>
+              </motion.div>
+            </div>
+          ) : (
+            /* 通常レイアウト: 画像左右 + テキスト横 */
+            <div key={idx} className={`flex flex-col md:flex-row gap-16 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+              <motion.div
+                className="w-full md:w-1/2 relative group"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+              >
                 <div className="aspect-[3/4] overflow-hidden relative bg-[#2e2e2e]">
                   <img
                     src={service.img}
@@ -151,31 +178,30 @@ export const ServiceSection: React.FC = () => {
                   />
                   <div className="absolute inset-0 border border-white/5 pointer-events-none" />
                 </div>
-              )}
-            </motion.div>
+              </motion.div>
 
-            {/* Content */}
-            <motion.div 
-              className="w-full md:w-1/2"
-              initial={{ opacity: 0, x: idx % 2 === 0 ? 30 : -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.2 }}
-            >
-              <span className="text-gray-500 text-[10px] tracking-[0.4em] uppercase block mb-6">{service.id} — {service.title}</span>
-              <h4 className="text-[28px] sm:text-3xl md:text-4xl font-serif text-white mb-8 leading-tight whitespace-pre-line tracking-tight md:tracking-normal">
-                {service.jpTitle}
-              </h4>
-              <p className="text-white leading-8 font-serif mb-10 text-left md:text-justify max-w-md">
-                {service.desc}
-              </p>
-              {service.vip && (
-                <p className="text-gold/80 text-sm font-light">
-                  ※ 上級VIPコース限定
+              <motion.div
+                className="w-full md:w-1/2"
+                initial={{ opacity: 0, x: idx % 2 === 0 ? 30 : -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                <span className="text-gray-500 text-[10px] tracking-[0.4em] uppercase block mb-6">{service.id} — {service.title}</span>
+                <h4 className="text-[28px] sm:text-3xl md:text-4xl font-serif text-white mb-8 leading-tight whitespace-pre-line tracking-tight md:tracking-normal">
+                  {service.jpTitle}
+                </h4>
+                <p className="text-white leading-8 font-serif mb-10 text-left md:text-justify max-w-md">
+                  {service.desc}
                 </p>
-              )}
-            </motion.div>
-          </div>
+                {service.vip && (
+                  <p className="text-gold/80 text-sm font-light">
+                    ※ 上級VIPコース限定
+                  </p>
+                )}
+              </motion.div>
+            </div>
+          )
         ))}
       </div>
     </Section>
