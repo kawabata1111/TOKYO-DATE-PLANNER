@@ -16,8 +16,8 @@ export const LegalPage: React.FC = () => {
             {[
               { label: "販売業者", value: "TOKYO DATE PLANNER" },
               { label: "運営統括責任者", value: "内海 亮" },
-              { label: "電話番号", value: "090-7813-9711（受付時間 10:00-18:00）" },
-              { label: "メールアドレス", value: "ap.id.1224@icloud.com" },
+              { label: "電話番号", value: "050-1794-0390（受付時間 10:00-18:00）" },
+              { label: "メールアドレス", value: "tokyo.date.planner@gmail.com" },
               { label: "販売価格", value: "各プランのページに記載されている価格とします。" },
               { label: "商品代金以外の必要料金", value: "銀行振込手数料、およびサービス利用に伴う交通費・飲食代等の実費はお客様負担となります。" },
               { label: "お支払い方法", value: "銀行振込、クレジットカード決済" },

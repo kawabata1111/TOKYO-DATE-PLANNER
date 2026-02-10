@@ -60,7 +60,7 @@ export const PrivacyPolicy: React.FC = () => {
             <div className="bg-[#111] p-6 mt-4 border border-gray-800">
               <p>TOKYO DATE PLANNER</p>
               <p>担当：内海</p>
-              <p>E-mail: ap.id.1224@icloud.com</p>
+              <p>E-mail: tokyo.date.planner@gmail.com</p>
             </div>
           </div>
 
