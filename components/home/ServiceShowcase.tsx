@@ -5,7 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export const ProblemSection: React.FC = () => {
   return (
-    <Section id="concept" className="bg-[#050505]" noPadding>
+    <Section id="concept" className="bg-[#050505] pt-16 md:pt-0" noPadding>
       <div className="flex flex-col md:flex-row min-h-[80vh]">
         {/* Image Side */}
         <div className="w-full md:w-1/2 relative min-h-[400px] overflow-hidden">
@@ -13,7 +13,7 @@ export const ProblemSection: React.FC = () => {
             src="/images/concept.jpg"
             alt="Elegant party scene"
             loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover transform scale-100 transition-transform duration-1000 hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover object-right transform scale-100 transition-transform duration-1000 hover:scale-105"
           />
         </div>
 
