@@ -12,6 +12,8 @@ import { LegalPage } from './components/legal/LegalPage';
 import { PrivacyPolicy } from './components/legal/PrivacyPolicy';
 import { ThanksPage } from './components/home/ThanksPage';
 import { VideoPage } from './components/home/VideoPage';
+import { AdvisorsPage } from './components/advisors/AdvisorsPage';
+import { AdvisorDetail } from './components/advisors/AdvisorDetail';
 
 // トップに戻るボタン
 const ScrollToTop = () => {
@@ -41,23 +43,29 @@ const HomePage = () => (
   </main>
 );
 
+const MainLayout = () => (
+  <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-gold selection:text-white">
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/legal" element={<LegalPage />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/thanks" element={<ThanksPage />} />
+      <Route path="/video" element={<VideoPage />} />
+    </Routes>
+    <Footer />
+    <ScrollToTop />
+  </div>
+);
+
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-gold selection:text-white">
-        <Navbar />
-        
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/legal" element={<LegalPage />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/thanks" element={<ThanksPage />} />
-          <Route path="/video" element={<VideoPage />} />
-        </Routes>
-
-        <Footer />
-        <ScrollToTop />
-      </div>
+      <Routes>
+        <Route path="/advisors" element={<AdvisorsPage />} />
+        <Route path="/advisors/:id" element={<AdvisorDetail />} />
+        <Route path="/*" element={<MainLayout />} />
+      </Routes>
     </Router>
   );
 }
