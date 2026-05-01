@@ -6,45 +6,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 export const PricingSection: React.FC = () => {
   const basePlans = [
     {
-      name: "初級コース",
-      price: "200,000",
-      desc: "まずは始めたい方へ",
+      name: "通常コース",
+      price: "",
+      desc: "参考例",
       features: [
-        "ファッションコーディネート（春夏秋冬 年4回）",
-        "写真撮影（春夏秋冬 年4回）",
+        "ファッションコーディネート（春夏秋冬）",
+        "写真撮影（春夏秋冬）",
         "美容院の紹介+初回カット無料",
-        "LINEによるファッション相談",
-        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）"
-      ],
-      recommend: false,
-      hasLoveOption: false
-    },
-    {
-      name: "中級コース",
-      price: "300,000",
-      desc: "本気で出会いたい方へ",
-      features: [
-        "ファッションコーディネート（春夏秋冬 年6回）",
-        "写真撮影（春夏秋冬 年6回）",
-        "美容院の紹介+初回カット無料",
-        "LINEによるファッション相談",
-        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）"
-      ],
-      recommend: true,
-      hasLoveOption: false
-    },
-    {
-      name: "上級VIPコース",
-      price: "500,000",
-      desc: "理想のパートナーを見つけたい方へ",
-      features: [
-        "ファッションコーディネート（春夏秋冬 年6回）",
-        "写真撮影（春夏秋冬 年6回）",
-        "美容院の紹介+初回カット無料",
-        "LINEによるファッション相談",
-        "ファッションオンラインサービス",
-        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
-        "理想のパートナーを個別で直接ご紹介（マンツーマンでのパートナー探し全面協力）"
+        "LINEによるファッション相談＆恋愛相談",
+        "恋活＆婚活お食事会ご招待（※男女5対5などの少人数制）",
+        "理想のパートナーを個別で直接ご紹介（マンツーマンでのパートナー探し全面サポート）"
       ],
       recommend: false,
       hasLoveOption: false
@@ -53,77 +24,22 @@ export const PricingSection: React.FC = () => {
 
   const loveOptionPlans = [
     {
-      name: "初級コース",
+      name: "恋愛オプション付きコース",
       subtitle: "恋愛オプション付",
-      price: "300,000",
-      desc: "恋愛サポートも欲しい方へ",
+      price: "",
+      desc: "参考例",
       features: [
-        "ファッションコーディネート（春夏秋冬 年4回）",
-        "写真撮影（春夏秋冬 年4回）",
+        "ファッションコーディネート（春夏秋冬）",
+        "写真撮影（春夏秋冬）",
         "美容院の紹介+初回カット無料",
-        "LINEによるファッション相談&恋愛相談",
-        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
-        "女性アドバイザーによるお悩みzoom相談室（毎月開催）"
-      ],
-      recommend: false,
-      hasLoveOption: true
-    },
-    {
-      name: "中級コース",
-      subtitle: "恋愛オプション付",
-      price: "450,000",
-      desc: "本気の恋愛サポート",
-      features: [
-        "ファッションコーディネート（春夏秋冬 年6回）",
-        "写真撮影（春夏秋冬 年6回）",
-        "美容院の紹介+初回カット無料",
-        "LINEによるファッション相談&恋愛相談",
-        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
-        "女性アドバイザーによるお悩みzoom相談室（毎月開催）",
-        "女性アドバイザーによるリアルデートトレーニング（年2回）",
-        "女性恋愛講師によるオンラインセミナー"
-      ],
-      recommend: false,
-      hasLoveOption: true
-    },
-    {
-      name: "上級VIPコース",
-      subtitle: "恋愛オプション付",
-      price: "600,000",
-      desc: "フルサポートで理想の出会いを",
-      features: [
-        "ファッションコーディネート（春夏秋冬 年6回）",
-        "写真撮影（春夏秋冬 年6回）",
-        "美容院の紹介+初回カット無料",
-        "LINEによるファッション相談&恋愛相談",
-        "ファッションオンラインサービス",
-        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
-        "理想のパートナーを個別で直接ご紹介（マンツーマンでのパートナー探し全面協力）",
+        "LINEによるファッション相談＆恋愛相談",
+        "恋活＆婚活お食事会ご招待（※男女5対5などの少人数制）",
+        "理想のパートナーを個別で直接ご紹介（マンツーマンでのパートナー探し全面サポート）",
         "女性アドバイザーによるお悩みzoom相談室（毎月開催）",
         "女性アドバイザーによるリアルデートトレーニング（年4回）",
         "女性恋愛講師によるオンラインセミナー"
       ],
       recommend: true,
-      hasLoveOption: true
-    },
-    {
-      name: "完全婚活支援コース",
-      subtitle: "恋愛オプション付",
-      price: "800,000",
-      desc: "成婚まで徹底サポート",
-      features: [
-        "ファッションコーディネート（春夏秋冬 年6回）",
-        "写真撮影（春夏秋冬 年6回）",
-        "美容院の紹介+初回カット無料",
-        "LINEによるファッション相談&恋愛相談",
-        "ファッションオンラインサービス",
-        "恋活&婚活お食事会ご招待（※男女5対5などの少人数制）",
-        "理想のパートナーを個別で直接ご紹介（マンツーマンでのパートナー探し全面協力）",
-        "女性アドバイザーによるお悩みzoom相談室（毎月開催）",
-        "女性アドバイザーによるリアルデートトレーニング（年4回）",
-        "女性恋愛講師によるオンラインセミナー"
-      ],
-      recommend: false,
       hasLoveOption: true
     }
   ];
@@ -157,13 +73,7 @@ export const PricingSection: React.FC = () => {
         <p className="text-gray-500 text-xs">{plan.desc}</p>
       </div>
 
-      <div className="mb-8 pb-8 border-b border-gray-800">
-        <div className="flex items-baseline">
-          <span className="text-lg text-white mr-2">¥</span>
-          <span className="text-4xl md:text-5xl font-display text-white font-light">{plan.price}</span>
-        </div>
-        <span className="text-gray-600 text-[10px] uppercase tracking-widest mt-2 block">Tax Included</span>
-      </div>
+      <div className="mb-8 pb-8 border-b border-gray-800"></div>
 
       <ul className="space-y-4 flex-grow mb-10">
         {plan.features.map((feature: string, fIdx: number) => (
@@ -184,7 +94,7 @@ export const PricingSection: React.FC = () => {
 
       {/* ベースプラン */}
       <h3 className="text-center text-white text-xl mb-8 font-light">ベーシックプラン</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
         {basePlans.map((plan, idx) => (
           <PlanCard key={idx} plan={plan} idx={idx} />
         ))}
@@ -192,7 +102,7 @@ export const PricingSection: React.FC = () => {
 
       {/* 恋愛オプション付きプラン */}
       <h3 className="text-center text-white text-xl mb-8 font-light">恋愛オプション付きプラン</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {loveOptionPlans.map((plan, idx) => (
           <PlanCard key={idx} plan={plan} idx={idx} />
         ))}
